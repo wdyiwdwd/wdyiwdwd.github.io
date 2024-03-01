@@ -21,7 +21,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "images/avatar.png"
+  avatar           : "https://sunqinxuan.github.io/images/avatar.webp"
   name             : "孙沁璇"
   pronouns         :  "she/her"  
   bio              : "sunqinxuan"
