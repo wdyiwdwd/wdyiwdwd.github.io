@@ -11,10 +11,10 @@ locale                   : "zh-CH"
 title                    : "sunqinxuan"
 title_separator          : "-"
 name                     : &name "sunqinxuan"
-description              : &description "personal description"
+description              : &description "an interesting person"
 url                      : https://sunqinxuan.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "sunqinxuan/sunqinxuan.github.io"
+repository               : "sunqinxuan.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -23,10 +23,10 @@ author:
   # Biographic information
   avatar           : "https://sunqinxuan.github.io/images/avatar.webp"
   name             : "孙沁璇"
-  pronouns         :  "she/her"  
-  bio              : "sunqinxuan"
-  location         : "北京"
-  employer         : "Zhejiang Lab"
+  pronouns         :  ""  
+  bio              : "An interesting person"
+  location         : "Beijing, China"
+  employer         : ""
   uri              :  "sunqinxuan.github.io"
   email            : "sunqinxuan@outlook.com" 
 
