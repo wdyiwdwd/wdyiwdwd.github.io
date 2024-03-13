@@ -24,6 +24,7 @@ Work experience
 * 2021.8-2022.8: Algorithm Engineer
   * China Intelligent and Connected Vehicles (Beijing) Research Institute Co.,Ltd.
   * Duties included: 
+
 Projects
 ======
   <ul>{% for post in site.talks reversed %}
