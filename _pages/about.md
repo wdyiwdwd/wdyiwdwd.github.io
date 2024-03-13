@@ -1,11 +1,11 @@
 ---
-permalink: /
-title: "About me"
+permalink: /aboutme/
+title: "About Me"
 author_profile: true
 redirect_from: 
   - /about/
-  - /about.html
 ---
 
-This is the website of Dr. Q. Sun.
+##  About Me
 
+* 
