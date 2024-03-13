@@ -11,8 +11,7 @@ redirect_from:
 
 {% capture written_label %}'None'{% endcapture %}
 
-The Chinese version of my CV can be <u><a href="http://sunqinxuan.github.io/files/publications_TIM2021.pdf">download it here.</a></u>
-<br/>
+The Chinese version of my CV can be <u><a href="http://sunqinxuan.github.io/files/cv_sqx.pdf">download it here.</a></u>
 
 Education
 ======
