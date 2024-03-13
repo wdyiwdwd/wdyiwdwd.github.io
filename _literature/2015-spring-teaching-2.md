@@ -2,7 +2,7 @@
 title: "Teaching experience 2"
 collection: literature
 type: "Workshop"
-permalink: /literation/2015-spring-teaching-1
+permalink: /literature/2015-spring-teaching-1
 venue: "University 1, Department"
 date: 2015-01-01
 location: "City, Country"
