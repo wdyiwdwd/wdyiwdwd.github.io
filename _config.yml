@@ -26,8 +26,8 @@ author:
   #pronouns         :  ""  
   bio              : "An interesting person"
   location         : "Beijing, China"
-  employer         : "Zhejiang Lab"
-  uri              :   
+  #employer         : "Zhejiang Lab"
+  uri              :  
   email            : "sunqinxuan@outlook.com" 
 
   # Academic websites
