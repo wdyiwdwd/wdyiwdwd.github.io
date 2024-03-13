@@ -9,8 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-{% capture written_label %}'None'{% endcapture %}
-
 The Chinese version of my CV can be <u><a href="http://sunqinxuan.github.io/files/cv_sqx.pdf">download it here.</a></u>
 
 Education
@@ -58,9 +56,11 @@ Publications
 
 {% for post in site.publications reversed %} {% include archive-single-cv.html %} {% endfor %}
 
-
 Awards
 ======
+
+{% for post in site.talks reversed %} {% include archive-single-talk-cv.html %} {% endfor %}
+
 - 2010.10, Second Prize in Physics Contest for College Students in Beihang University.
 - 2011.05, Third Prize in 2011 National English Contest for College Students.
 - 2011.05, Third Prize in the 21st Fengru Cup Competition of Beihang University.
