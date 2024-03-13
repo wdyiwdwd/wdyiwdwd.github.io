@@ -11,54 +11,37 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D in Control Science and Engineering, Nankai University, 2021
+* M.S. in Control Science and Engineering, Nankai University, 2016
+* B.S. in Electronics and Information Engineering, Beihang University, 2013
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* 2022.9-present: Research Assistant
+  * Zhejiang Lab
+  * Duties included: 
   
-Skills
+* 2021.8-2022.8: Algorithm Engineer
+  * China Intelligent and Connected Vehicles (Beijing) Research Institute Co.,Ltd.
+  * Duties included: 
+Projects
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+
 
 Publications
 ======
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Talks
+
+Awards
 ======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+- 2010.10, Second Prize in Physics Contest for College Students in Beihang University.
+- 2011.05, Third Prize in 2011 National English Contest for College Students.
+- 2011.05, Third Prize in the 21st Fengru Cup Competition of Beihang University.
+- 2011.06, Third Price in the 7th Fujitsu Cup Competition of Beihang University.
+- 2012.05, Third Prize in the 22nd Fengru Cup Competition of Beihang University.
+- 2012.05, Second Prize in the 8th Electronics Competition of Beihang University.
+- 2012.06, Third Prize in 2012 Beijing College-Student Electronics Design Contest.
+- 2012.12, Second Prize Scholarship of Collective Duties for the 2011-2012 Academic Year of Beihang University.
+- 2012.12, Third Prize Scholarship of Science and Technology Competition for the 2011-2012 Academic Year of Beihang University.
