@@ -53,11 +53,9 @@ Projects
   * Development of the RGB-D camera-based 3D environmental map building system using RANSAC and ICP scan matching.
   * Development of the AprilTag detection and localization.
 
+
 Publications
 ======
-
-{% for post in site.publications reversed %} {% include archive-single-cv.html %} {% endfor %}
-
 - **Q. Sun**, J. Yuan, X. Zhang. IT-HYFAO-VO: Interpretation Tree-Based VO With Hybrid Feature Association and Optimization. *IEEE Transactions on Instrumentation & Measurement*, 2021, 70: 1-18.
 - **Q. Sun**, J. Yuan, X. Zhang, F. Duan. Plane-Edge-SLAM: Seamless Fusion of Planes and Edges for SLAM in Indoor Environments. *IEEE Transactions on Automation Science and Engineering*, 2021, 18(4): 2061-2075.
 - **Q. Sun**, J. Yuan, X. Zhang, F. Sun. RGB-D SLAM in Indoor Environments with STING-Based Plane Feature Extraction. *IEEE/ASME Transactions on Mechatronics*, 2018, 23(3): 1071-1082.
