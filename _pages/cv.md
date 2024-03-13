@@ -82,3 +82,14 @@ Awards
 - 2012.06, Third Prize in 2012 Beijing College-Student Electronics Design Contest.
 - 2012.12, Second Prize Scholarship of Collective Duties for the 2011-2012 Academic Year of Beihang University.
 - 2012.12, Third Prize Scholarship of Science and Technology Competition for the 2011-2012 Academic Year of Beihang University.
+
+
+
+{% include base_path %}
+
+{% capture written_label %}'None'{% endcapture %}
+
+If the embedded PDF below does not load, you can <u><a href="http://sunqinxuan.github.io/files/publications_TIM2021.pdf">download it here.</a></u>
+<br/>
+
+<embed src="http://sunqinxuan.github.io/files/publications_TIM2021.pdf" type="application/pdf" width="100%" />
