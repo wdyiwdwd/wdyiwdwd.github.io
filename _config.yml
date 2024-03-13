@@ -23,11 +23,11 @@ author:
   # Biographic information
   avatar           : "https://sunqinxuan.github.io/images/avatar.webp"
   name             : "孙沁璇"
-  pronouns         :  ""  
+  #pronouns         :  ""  
   bio              : "An interesting person"
   location         : "Beijing, China"
-  employer         : ""
-  uri              :  "sunqinxuan.github.io"
+  employer         : "Zhejiang Lab"
+  uri              :   
   email            : "sunqinxuan@outlook.com" 
 
   # Academic websites
