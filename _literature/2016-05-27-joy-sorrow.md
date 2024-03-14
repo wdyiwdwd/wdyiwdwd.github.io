@@ -2,7 +2,7 @@
 title: "悲欣交集"
 collection: literature
 type: "poem"
-permalink: /literature/literature-20160527
+permalink: /literature/literature-2016-05-27
 venue: "孙沁璇"
 date: 2016-05-27
 location: "Tianjin, China"
@@ -19,8 +19,9 @@ location: "Tianjin, China"
 
 故曰，莫若破执，强如弃世。
 
-![悲欣交集见观经](https://sunqinxuan.github.io/images/literature-20160527-image1.jpg)
+![悲欣交集见观经](https://sunqinxuan.github.io/images/literature-2016-05-27-img1.jpg)
 
+<br>
 
 木兰花 · 儿时窗中景
 
@@ -43,5 +44,4 @@ location: "Tianjin, China"
 遥知惆怅即迁家。生若浮萍，愿行尽纷华。
 
 莫道此去无枝桠，天涯若同在，共赴诗酒茶。
-
 
