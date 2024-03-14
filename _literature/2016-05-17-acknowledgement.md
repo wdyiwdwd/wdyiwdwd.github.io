@@ -8,4 +8,4 @@ date: 2016-05-17
 location: "Tianjin, China"
 ---
 
-![致谢](https://sunqinxuan.github.io/images/literature-2016-05-17-img1.jpg)
+![致谢](https://sunqinxuan.github.io/images/literature-2016-05-17-img1.png)
