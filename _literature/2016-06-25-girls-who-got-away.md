@@ -8,8 +8,6 @@ date: 2016-06-25
 location: "Tianjin, China"
 ---
 
-<br>
-
 喃喃诉底事，执手问红妆：
 
 <br>
