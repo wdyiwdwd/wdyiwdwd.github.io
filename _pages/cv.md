@@ -53,3 +53,7 @@ Publications
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
+
+Chinese Version
+======
+The Chinese version of my CV can be <u><a href="http://sunqinxuan.github.io/files/cv_sqx.pdf">download it here.</a></u>
