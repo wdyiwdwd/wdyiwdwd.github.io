@@ -74,9 +74,14 @@ Visual Studio 2010，PCL
 
 ![img](https://sunqinxuan.github.io/images/posts-research-journal-2013-07-img3.png)
 
+此时若调整权重系数可使以上问题得到一些改善，如下图所示是将权重调整为0.8与0.2，即减小被搜索点云中点的权重后的结果，基本可以达到与原点云分布相当的程度。但若要从根本上解决此问题，需要判断点与点之间更准确的对应关系。在文献[2]与文献[3]中是采用将点沿其法向移动，然后再用类似聚类的方法，来检测更准确的对应关系。只是这样的方法需要在已知一些几何信息的前提下，也就需要加入额外的计算，需要考虑其对实时性的影响。
+
+![img](https://sunqinxuan.github.io/images/posts-research-journal-2013-07-img4.png)
+
 ## 参考文献
 
 - [1] C. Dorai, A. K. Jain. Registration and Integration of Multiple Object Views for 3D Model Construction[J]. Pattern Analysis and Machine Intelligence, 1998, 20(1): 83 – 89.
+
 - [2] H. Zhou, Y. Liu. Incremental point-based integration of registered multiple range images[J]. Industrial Electronics Society, 2005, 23: 6-10.
 
 - [3] H. Zhou, Y. Liu. Accurate integration of multi-view range images using k-means clustering[J]. Pattern Recognition, 2008, 41(1): 152–175.
