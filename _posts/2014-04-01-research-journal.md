@@ -46,7 +46,7 @@ research journal, 2014.4.
 |       9       |        246        |
 
 ![img](https://sunqinxuan.github.io/images/posts-research-journal-2014-04-img1.png)
-![img](https://sunqinxuan.github.io/images/posts-research-journal-2014-04-img1.png)
+![img](https://sunqinxuan.github.io/images/posts-research-journal-2014-04-img2.png)
 
 ## 后期工作思路
 
@@ -57,5 +57,4 @@ research journal, 2014.4.
   - 在粗匹配的实现中考虑图像中的其它信息，如颜色、纹理等。
 
   - 加入学习机制，建立地图的高层描述。
-
 

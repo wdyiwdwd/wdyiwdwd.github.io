@@ -5,7 +5,7 @@ permalink: /publication/TIM2021
 excerpt: 'This paper is about IT-HYFAO-VO.'
 date: 2021-08-24
 venue: 'IEEE Transactions on Instrumentation & Measurement'
-paperurl: 'http://sunqinxuan.github.io/files/publications_TIM2021.pdf'
+paperurl: 'http://sunqinxuan.github.io/files/publications-2021-08-24-TIM.pdf'
 citation: 'Q. Sun, J. Yuan, X. Zhang. IT-HYFAO-VO: Interpretation Tree-Based VO With Hybrid Feature Association and Optimization. IEEE Transactions on Instrumentation & Measurement, 2021, 70: 1-18.'
 ---
 
