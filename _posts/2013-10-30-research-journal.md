@@ -1,5 +1,5 @@
 ---
-title: '【研究工作记录】2013-10'
+title: '【研究工作记录】2013-10-ICP学习与调研'
 date: 2013-10-30
 permalink: /posts/research-journal-2013-10/
 tags:
