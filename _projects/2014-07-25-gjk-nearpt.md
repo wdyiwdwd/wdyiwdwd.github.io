@@ -65,7 +65,7 @@ CUDA代码分为两部分，一部分是host（CPU）上运行，是普通的C�
 
 流程如下图所示。
 
-![GJK](https://sunqinxuan.github.io/images/project-2014-07-25-img1.PNG)
+<img src="https://sunqinxuan.github.io/images/project-2014-07-25-img1.PNG" alt="GJK" style="zoom:50%;" />
 
 ### 用ANN实现Kd_tree
 
@@ -112,7 +112,6 @@ CUDA代码分为两部分，一部分是host（CPU）上运行，是普通的C�
 - 由于距离是直接用得到的最近点来计算的，所以对于采样点较稀疏的物体来说，得到的最近距离可能并不是两个物体之间的最近距离。
 
 ![img](https://sunqinxuan.github.io/images/project-2014-07-25-img3.gif)
-
 
 
 
