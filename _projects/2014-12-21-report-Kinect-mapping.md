@@ -1,14 +1,18 @@
 ---
-title: "【家服机器人项目】基于Kinect的室内环境建图测试情况"
+title: "家服机器人项目-基于Kinect的室内环境建图"
 collection: projects
 type: "Project"
-permalink: /projects/2014-12-21-expr-Kinect-mapping
+permalink: /projects/2014-12-21-report-Kinect-mapping
 venue: "Nankai University"
 date: 2014-12-21
 location: "Tianjin, China"
 ---
 
-基于Kinect的室内环境建图测试情况
+基于Kinect的室内环境建图
+
+## 研究方案
+
+研究方案请<a href="http://sunqinxuan.github.io/files/2014-11-18-report-Kinect-mapping.pdf">点击此处下载</a>。
 
 ## 方法概述
 
@@ -65,5 +69,8 @@ Kinect获取的数据为640*480的RGB图像数据以及各像素点对应的深�
 
 ![点云地图](https://sunqinxuan.github.io/images/project-2014-12-21-img5.jpg)
 
+## 相关链接
 
-
+相关代码：
+- [kinect_mapping]([sunqinxuan/kinect_mapping (github.com)](https://github.com/sunqinxuan/kinect_mapping))
+- [service_robot_mapping](https://github.com/sunqinxuan/service_robot_mapping)
