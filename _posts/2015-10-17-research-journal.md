@@ -1,5 +1,5 @@
 ---
-title: '【研究工作记录】2015-10-点云配准'
+title: '【研究工作记录】2015-10-Kinect深度误差分析'
 date: 2015-10-17
 permalink: /posts/research-journal-2015-10/
 tags:
@@ -30,11 +30,13 @@ research journal, 2015.10.
 ### Kinect数据误差的三个方面
 
 - 深度随机误差 random error
+
   $$
   \sigma_Z=\frac{m}{fb}Z^2\sigma_{d'}
   $$
 
-- 深度分辨率 depth resolution  
+- 深度分辨率 depth resolution 
+
   $$
   \Delta_Z=\frac{m}{fb}Z^2
   $$
@@ -43,6 +45,7 @@ research journal, 2015.10.
   - 导致深度值不连续（即点云分层）的现象（见下一页图）
   
 - XY平面点密度 point density
+
   $$
   \Delta_X=\Delta_Y=\frac{Z_K}{f}p_x
   $$
@@ -64,7 +67,7 @@ research journal, 2015.10.
 对应上面9个图中的黄色矩形
 
 | **深度(mm)** | **分辨率(mm)** | **密度(mm)** |
-| :----------: | :----------------: | ---------------- |
+| :----------: | :----------------: | :--------------: |
 | 1765         | 8                  | 3.3              |
 | 2150         | 14                 | 4.0              |
 | 2670         | 20                 | 5.0              |
@@ -80,12 +83,18 @@ research journal, 2015.10.
 其中（标定得到）
 
 $$
-\frac{m}{fb}=2.85e-5 \\
-f=5.453mm \\
+\frac{m}{fb}=2.85e-5 
+$$
+
+$$
+f=5.453mm
+$$
+
+$$
 p_x=p_y=9.3\mu m
 $$
 
-![img](https://sunqinxuan.github.io/images/posts-research-journal-2015-10-img3.png)
+<img src="https://sunqinxuan.github.io/images/posts-research-journal-2015-10-img3.png" alt="img" style="zoom:70%;" />
 
 引用他人验证随机误差与深度之间关系的实验结果[^1]：
 
@@ -101,9 +110,11 @@ $$
 
 在深度值6000mm以内：
 
-深度的随机误差在50mm以内，并随深度平方增长
-深度分辨率在100mm以内，并随深度平方增长
-XY平面点密度10mm以内，并随深度线性增长
+- 深度的随机误差在50mm以内，并随深度平方增长
+
+- 深度分辨率在100mm以内，并随深度平方增长
+
+- XY平面点密度10mm以内，并随深度线性增长
 
 文献[^1]中说当拟合点数足够大时即可以忽略分辨率的影响（图中蓝色曲线），但文中并未展示相关实验结果来验证这一点（不过文中实验用到4500个数据点来做拟合确实已经足够多）。
 
@@ -129,7 +140,7 @@ $$
 
 即所拟合局部平面的大小，须要足够大，以至于可以忽略当前深度值下平面法向量方向的不确定度。
 
-![img](https://sunqinxuan.github.io/images/posts-research-journal-2015-10-img5.png)
+<img src="https://sunqinxuan.github.io/images/posts-research-journal-2015-10-img5.png" alt="img" style="zoom:70%;" />
 
 下面需要考虑：如何表征拟合局部平面的大小。
 
