@@ -14,3 +14,8 @@ location: "Tianjin, China"
 <br>
 
 <embed src="http://sunqinxuan.github.io/files/2014-11-18-report-Kinect-mapping.pdf" type="application/pdf" width="100%" />
+
+相关代码：
+
+- [kinect_mapping]([sunqinxuan/kinect_mapping (github.com)](https://github.com/sunqinxuan/kinect_mapping))
+- [service_robot_mapping](https://github.com/sunqinxuan/service_robot_mapping)

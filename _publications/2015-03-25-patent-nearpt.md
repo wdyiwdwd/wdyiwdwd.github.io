@@ -12,8 +12,3 @@ citation: ' 一种虚拟现实仿真中物体表面间最小距离的快速计�
 相关方案可[点此查阅](https://sunqinxuan.github.io/projects/2014-07-25-gjk-nearpt)。
 
 <img src="https://sunqinxuan.github.io/images/project-2014-07-25-img1.PNG" alt="GJK" style="zoom:50%;" />
-
-
-
-
-

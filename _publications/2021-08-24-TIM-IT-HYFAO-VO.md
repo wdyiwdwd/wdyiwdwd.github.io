@@ -1,5 +1,5 @@
 ---
-title: "IT-HYFAO-VO: Interpretation Tree-Based VO With Hybrid Feature Association and Optimization"
+title: "【期刊论文】IT-HYFAO-VO: Interpretation Tree-Based VO With Hybrid Feature Association and Optimization"
 collection: publications
 permalink: /publication/TIM2021
 excerpt: 'This paper is about IT-HYFAO-VO.'
