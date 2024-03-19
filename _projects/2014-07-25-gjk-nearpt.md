@@ -1,14 +1,14 @@
 ---
-title: "【家服机器人项目】基于Kinect的室内环境建图测试情况"
+title: "基于GJK算法的物体最近距离计算方法"
 collection: projects
 type: "Project"
-permalink: /projects/2014-12-21-expr-Kinect-mapping
+permalink: /projects/2014-07-25-gjk-nearpt
 venue: "Nankai University"
-date: 2014-12-21
+date: 2014-07-25
 location: "Tianjin, China"
 ---
 
-基于Kinect的室内环境建图测试情况
+基于GJK算法的物体最近距离计算方法
 
 ## 基本算法原理
 
@@ -101,8 +101,6 @@ CUDA代码分为两部分，一部分是host（CPU）上运行，是普通的C�
 
 - 由于GJK算法只适用于凸多边形或凸多面体，所以在实际应用背景下，可能多数情况都不能直接运行该算法来进行距离的计算，从而涉及到如何将复杂物体分割成多个凸多面体，而这个分割的过程是否能满足实时性和准确性的要求。
 
-
-
 ### ANN
 
 实现速度：~30fps（两个物体的采样点数都为5000个点）。
@@ -112,6 +110,8 @@ CUDA代码分为两部分，一部分是host（CPU）上运行，是普通的C�
 存在问题：
 
 - 由于距离是直接用得到的最近点来计算的，所以对于采样点较稀疏的物体来说，得到的最近距离可能并不是两个物体之间的最近距离。
+
+![img](https://sunqinxuan.github.io/images/project-2014-07-25-img3.gif)
 
 
 
