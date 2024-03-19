@@ -72,5 +72,5 @@ Kinect获取的数据为640*480的RGB图像数据以及各像素点对应的深�
 ## 相关链接
 
 相关代码：
-- [kinect_mapping]([sunqinxuan/kinect_mapping (github.com)](https://github.com/sunqinxuan/kinect_mapping))
+- [kinect_mapping](https://github.com/sunqinxuan/kinect_mapping)
 - [service_robot_mapping](https://github.com/sunqinxuan/service_robot_mapping)
