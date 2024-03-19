@@ -12,7 +12,7 @@ location: "Tianjin, China"
 
 ## 研究方案
 
-研究方案请<a href="http://sunqinxuan.github.io/files/2014-11-18-report-Kinect-mapping.pdf">点击此处下载</a>。
+研究方案请<a href="http://sunqinxuan.github.io/files/projects-2014-11-18-report-Kinect-mapping.pdf">点击此处下载</a>。
 
 ## 方法概述
 
