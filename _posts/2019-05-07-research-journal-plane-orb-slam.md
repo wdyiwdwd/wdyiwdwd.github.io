@@ -1,5 +1,5 @@
 ---
-title: '【研究工作记录】2019-05-07-Ideas about the homography constraint-based ORB-SLAM'
+title: '【Research journal】2019-05-07-Ideas about the homography constraint-based ORB-SLAM'
 date: 2019-05-07
 permalink: /posts/research-journal-2019-05-07-plane-orb-slam/
 tags:
