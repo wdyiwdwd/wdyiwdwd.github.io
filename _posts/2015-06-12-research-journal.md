@@ -65,21 +65,21 @@ The root node contains all the points in one grid. A parent node in the tree can
 
 [^2]: Qingqiong Deng, Xiaopeng Zhang. Grid-based View-Dependent Foliage Simplification.  Journal of Computational Information Systems, 2008
 
-![img](https://sunqinxuan.github.io/images/posts-research-journal-2015-06-img5.png)
+<img src="https://sunqinxuan.github.io/images/posts-research-journal-2015-06-img5.png" alt="img" style="zoom:50%;" />
 
 ### 最大特征值阈值法实验结果
 
 场景一：30\\(\times\\)40栅格
 
-![img](https://sunqinxuan.github.io/images/posts-research-journal-2015-06-img6.jpg)
+<img src="https://sunqinxuan.github.io/images/posts-research-journal-2015-06-img6.jpg" alt="img" style="zoom:67%;" />
 
 场景一：15\\(\times\\)20栅格
 
-![img](https://sunqinxuan.github.io/images/posts-research-journal-2015-06-img7.jpg)
+<img src="https://sunqinxuan.github.io/images/posts-research-journal-2015-06-img7.jpg" alt="img" style="zoom:67%;" />
 
 场景二：15\\(\times\\)20栅格
 
-![img](https://sunqinxuan.github.io/images/posts-research-journal-2015-06-img8.jpg)
+<img src="https://sunqinxuan.github.io/images/posts-research-journal-2015-06-img8.jpg" alt="img" style="zoom: 50%;" />
 
 ### 栅格内平面拟合
 
