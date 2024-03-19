@@ -2,7 +2,7 @@
 title: "【Journal paper】IT-HYFAO-VO: Interpretation Tree-Based VO With Hybrid Feature Association and Optimization"
 collection: publications
 permalink: /publication/TIM2021
-excerpt: 'This paper is about IT-HYFAO-VO.'
+excerpt: 'IT-HYFAO-VO: Interpretation Tree-Based VO With Hybrid Feature Association and Optimization'
 date: 2021-08-24
 venue: 'IEEE Transactions on Instrumentation & Measurement'
 paperurl: 'http://sunqinxuan.github.io/files/publications-2021-08-24-TIM.pdf'

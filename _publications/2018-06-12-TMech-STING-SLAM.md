@@ -2,7 +2,7 @@
 title: "【Journal paper】RGB-D SLAM in Indoor Environments With STING-Based Plane Feature Extraction"
 collection: publications
 permalink: /publication/TMech2018
-excerpt: 'This paper is about STING-SLAM.'
+excerpt: 'RGB-D SLAM in Indoor Environments With STING-Based Plane Feature Extraction'
 date: 2018-06-12
 venue: 'IEEE/ASME Transactions on Mechatronics'
 paperurl: 'http://sunqinxuan.github.io/files/publications-2018-06-12-TMech.pdf'
