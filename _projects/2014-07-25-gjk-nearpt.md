@@ -117,7 +117,8 @@ CUDA代码分为两部分，一部分是host（CPU）上运行，是普通的C�
 
 ![img](https://sunqinxuan.github.io/images/project-2014-07-25-img3.gif)
 
-## 相关代码
+## 相关链接
 
-[gjk_nearpt](https://github.com/sunqinxuan/gjk_nearpt)
+代码：[gjk_nearpt](https://github.com/sunqinxuan/gjk_nearpt)
 
+发明专利：[CN104462764A](https://sunqinxuan.github.io/publication/CN104462764A)
