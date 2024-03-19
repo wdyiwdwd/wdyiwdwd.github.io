@@ -12,11 +12,11 @@ research journal, 2015.06.
 
 ### 基于Kinect的室内环境三维点云地图创建
 
-Overview of RGB-D mapping [^1]
+Overview of RGB-D mapping[^1]
 
 ![img](https://sunqinxuan.github.io/images/posts-research-journal-2015-06-img1.jpg)
 
-[^1] RGB-D mapping: Using Kinect-style depth cameras for dense 3D modeling of indoor environments, The International Journal of Robotics Research, 2012.
+[^1]: RGB-D mapping: Using Kinect-style depth cameras for dense 3D modeling of indoor environments, The International Journal of Robotics Research, 2012.
 
 ### RGB-D建图中常用数据预处理方法
 
@@ -59,11 +59,11 @@ Construct a binary tree based on point set partition to form a hierarchical repr
 
 ![img](https://sunqinxuan.github.io/images/posts-research-journal-2015-06-img4.png)
 
-### Binary tree construction [^2]
+### Binary tree construction[^2]
 
 The root node contains all the points in one grid. A parent node in the tree can be split into two child nodes, each representing a certain partition of the points in the parent node. Partition is performed based on the eigenvector corresponding to the largest eigenvalue of the 3d coordinate. For every level of the tree, the partition process is stopped when certain criterion is satisfied.
 
-[^2] Qingqiong Deng, Xiaopeng Zhang. Grid-based View-Dependent Foliage Simplification.  Journal of Computational Information Systems, 2008
+[^2]: Qingqiong Deng, Xiaopeng Zhang. Grid-based View-Dependent Foliage Simplification.  Journal of Computational Information Systems, 2008
 
 ![img](https://sunqinxuan.github.io/images/posts-research-journal-2015-06-img5.png)
 
