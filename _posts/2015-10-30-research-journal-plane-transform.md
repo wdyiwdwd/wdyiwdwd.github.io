@@ -14,12 +14,12 @@ tags:
 
 - 匹配时
 
-![img](https://sunqinxuan.github.io/images/posts-research-journal-2015-10-30-img1.png)
+![img](https://sunqinxuan.github.io/images/posts-research-journal-2015-10-30-img1.jpg)
 
 - 需要解决的问题
 
-![img](https://sunqinxuan.github.io/images/posts-research-journal-2015-10-30-img2.png)
+![img](https://sunqinxuan.github.io/images/posts-research-journal-2015-10-30-img2.jpg)
 
-![img](https://sunqinxuan.github.io/images/posts-research-journal-2015-10-30-img2.png)
+![img](https://sunqinxuan.github.io/images/posts-research-journal-2015-10-30-img3.jpg)
 
 
