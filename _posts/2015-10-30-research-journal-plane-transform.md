@@ -1,6 +1,6 @@
 ---
 title: '【研究工作记录】2015-10-30-基于平面的扫描匹配方案初步'
-date: 2015-10-17
+date: 2015-10-30
 permalink: /posts/research-journal-2015-10-30/
 tags:
   - research journal
