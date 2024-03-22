@@ -19,7 +19,7 @@ location: "Tianjin, China"
 
 ## 实验结果
 
-<a href="http://sunqinxuan.github.io/files/projects-2017-12-01-plane-edge-slam-expr.pdf">点击此处下载</a>
+<a href="http://sunqinxuan.github.io/files/projects-2017-12-01-plane-edge-slam-expr.pdf">experiments</a>
 
 ![img](https://sunqinxuan.github.io/images/projects-2017-12-01-img1.png)
 
