@@ -34,7 +34,7 @@ demonstrate that the proposed plane feature-based RGB-D
 SLAM can achieve high accuracy and robustness in both
 on-board and hand-held applications.
 
-<video src="http://sunqinxuan.github.io/videos/publications-TMech-2018-06-12-video1.mp4"></video>
+<video src="http://sunqinxuan.github.io/videos/publications-TMech-2018-06-12-video1.mp4" width="800px" height="600px" controls="controls"></video>
 
 The video shows the online robot SLAM experiment in a real world scene presented in Section V.D of the paper. Specifically, it shows the process of the RGB-D visual odometry and incremental mapping achieved by the proposed plane feature-based RGB-D camera pose estimation (PF-RGBD-CPE) method. 
 
