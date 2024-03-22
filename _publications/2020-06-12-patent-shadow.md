@@ -11,4 +11,4 @@ citation: ' 基于线段阴影的深度相机视觉里程测量方法[P]. 中国
 
 相关方案可[点此查阅](https://sunqinxuan.github.io/projects/2019-06-03-shadow-SLAM)。
 
-<img src="https://sunqinxuan.github.io/images/publications-2020-06-12-img1" alt="GJK" style="zoom:50%;" />
+<img src="https://sunqinxuan.github.io/images/publications-2020-06-12-img1.png" alt="GJK" style="zoom:50%;" />
