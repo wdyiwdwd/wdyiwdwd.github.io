@@ -51,6 +51,6 @@ plane-line-shadow-SLAM
 patent：
 - [CN202010089290](https://sunqinxuan.github.io/publication/CN202010089290)
 
-代码：
+code：
 - [plane_edge_shadow](https://github.com/sunqinxuan/plane_edge_shadow)
 - [plane_line_shadow](https://github.com/sunqinxuan/plane_line_shadow)
