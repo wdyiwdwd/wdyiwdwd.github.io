@@ -10,25 +10,47 @@ location: "Tianjin, China"
 
 plane-line-shadow-SLAM
 
-## 研究方案
+## related works
 
-<a href="http://sunqinxuan.github.io/files/projects-2017-12-01-plane-edge-slam-methodology.pdf">manuscript</a>
+<a href="http://sunqinxuan.github.io/files/projects-2019-06-03-related-work.pdf">On 3-D Motion Estimation from Feature Tracks in 2-D FS Sonar Video (TRO2013)</a>
 
-<a href="http://sunqinxuan.github.io/files/projects-2017-12-01-plane-edge-slam-proposal.pdf">report</a>
+## shadow of edges
 
+### 2018-06-21
 
-## 实验结果
+<a href="http://sunqinxuan.github.io/files/projects-2019-06-03-edge-shadow-1.pdf">scan alignment using shadows on the plane</a>
 
-<a href="http://sunqinxuan.github.io/files/projects-2017-12-01-plane-edge-slam-expr.pdf">experiments</a>
+![img](https://sunqinxuan.github.io/images/projects-2019-06-03-img1.png)
 
-![img](https://sunqinxuan.github.io/images/projects-2017-12-01-img1.png)
+### 2018-11-23
 
+<a href="http://sunqinxuan.github.io/files/projects-2019-06-03-edge-shadow-2.pdf">camera motion v.s. change of the occluded points</a>
 
-## 相关链接
+![img](https://sunqinxuan.github.io/images/projects-2019-06-03-img2.png)
 
-论文：
-- [Plane-Edge-SLAM: Seamless Fusion of Planes and Edges for SLAM in Indoor Environments](https://sunqinxuan.github.io/publication/TASE2020)
+## shadow of lines
+
+### 2019-03-26
+
+<a href="http://sunqinxuan.github.io/files/projects-2019-06-03-line-shadow-1.pdf">Motion Estimation using Occluding Lines</a>
+
+![img](https://sunqinxuan.github.io/images/projects-2019-06-03-img3.png)
+
+### 2019-06-03
+
+<a href="http://sunqinxuan.github.io/files/projects-2019-06-03-line-shadow-2.pdf">plane-line-shadow-SLAM</a>
+
+![img](https://sunqinxuan.github.io/images/projects-2019-06-03-img4.png)
+
+## experiments
+
+<a href="http://sunqinxuan.github.io/files/projects-2019-06-03-expr.pdf">experiments on some sequence of TUM dataset.</a>
+
+## related links
+
+patent：
+- [CN202010089290](https://sunqinxuan.github.io/publication/CN202010089290)
 
 代码：
-- [plane_edge_vo](https://github.com/sunqinxuan/plane_edge_vo)
-- [plane_edge_slam](https://github.com/sunqinxuan/plane_edge_slam)
+- [plane_edge_shadow](https://github.com/sunqinxuan/plane_edge_shadow)
+- [plane_line_shadow](https://github.com/sunqinxuan/plane_line_shadow)
