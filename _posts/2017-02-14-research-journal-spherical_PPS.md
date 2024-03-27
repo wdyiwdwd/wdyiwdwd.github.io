@@ -1,5 +1,5 @@
 ---
-title: '【Research journal】2017-02-14-ideas about the spherical pps'
+title: '【Research journal】ideas about the spherical pps'
 date: 2017-02-14
 permalink: /posts/research-journal-2017-02-14/
 tags:
