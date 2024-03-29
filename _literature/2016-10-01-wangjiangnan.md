@@ -10,7 +10,7 @@ location: "Tianjin, China"
 
 望江南
 
-![望江南](https://sunqinxuan.github.io/images/literature-2016-10-01-img1.png)
+![望江南](https://sunqinxuan.github.io/images/literature-2016-10-01-img1.webp)
 
 <br>
 
