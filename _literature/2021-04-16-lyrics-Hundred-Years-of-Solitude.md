@@ -2,9 +2,9 @@
 title: "【歌词翻译】王菲《百年孤寂》"
 collection: literature
 type: "essay"
-permalink: /literature/literature-2021-05-06
+permalink: /literature/literature-2021-04-16
 venue: "孙沁璇"
-date: 2021-05-06
+date: 2021-04-16
 location: "Tianjin, China"
 ---
 
@@ -12,7 +12,7 @@ location: "Tianjin, China"
 
 ![solicitude](https://sunqinxuan.github.io/images/literature-2021-04-16-img1.webp)
 
-**百年孤寂  Hundred Years of Solitude**
+## 百年孤寂  Hundred Years of Solitude
 
 <br>
 
