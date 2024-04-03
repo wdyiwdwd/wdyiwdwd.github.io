@@ -19,8 +19,8 @@ link:
 I read this patent for the derivation of the eq.(3) in Patent US2692970A.
 
 > This invention relates to compensation systems, and
-more particularly to methods of and means for com
-pensating the induced magnetic fields of aircraft.
+more particularly to methods of and means for 
+compensating the induced magnetic fields of aircraft.
 
 > The total induced magnetic field due to all soft magnetic 
 parts of an aircraft structure may be reproduced by
@@ -89,7 +89,6 @@ multiplied to give the magnitude of the particular component,
 while <u>the trigonometric argument in each case indicates
 the manner in which this amplitude varies as the aircraft
 maneuvers</u>.
-
 
 ## Compensation of aircraft magnetic fields
 
