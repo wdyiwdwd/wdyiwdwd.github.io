@@ -1,5 +1,5 @@
 ---
-title: '【Research journal】Two Patents relating Tolles-Lawson Model'
+title: '【Research journal】Patents by Walter E Tolles relating Tolles-Lawson Model'
 date: 2024-04-03
 permalink: /posts/research-journal-2024-04-03-tolles-lawson-patent/
 tags:
