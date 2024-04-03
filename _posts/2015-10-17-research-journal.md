@@ -1,5 +1,5 @@
 ---
-title: '【研究工作记录】2015-10-Kinect深度误差分析'
+title: '【研究工作记录】Kinect深度误差分析'
 date: 2015-10-17
 permalink: /posts/research-journal-2015-10/
 tags:

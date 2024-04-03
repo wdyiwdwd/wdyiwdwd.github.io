@@ -1,5 +1,5 @@
 ---
-title: '【研究工作记录】2013-11-ICP实现'
+title: '【研究工作记录】ICP实现'
 date: 2013-10-30
 permalink: /posts/research-journal-2013-10/
 tags:
