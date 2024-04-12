@@ -11,7 +11,7 @@ Semantic SLAM 相关方案调研.
 
 ## 高精地图语义定位
 
-[[1]	Huayou Wang, Changliang Xue, Yanxing Zhou, Feng Wen and Hongbo Zhang. Visual Semantic Localization based on HD Map for Autonomous Vehicles in Urban Scenarios. 2021 IEEE International Conference on Robotics and Automation (ICRA 2021).](https://ieeexplore.ieee.org/document/9561459)
+[Huayou Wang, Changliang Xue, Yanxing Zhou, Feng Wen and Hongbo Zhang. Visual Semantic Localization based on HD Map for Autonomous Vehicles in Urban Scenarios. 2021 IEEE International Conference on Robotics and Automation (ICRA 2021).](https://ieeexplore.ieee.org/document/9561459)
 
 论文提出基于高精地图和语义特征的视觉主义定位算法。在城市道路环境中，语义特征易于提取，并且对光照、天气和视角等变化有着一定的鲁棒性。针对语义特征关联问题，提出了鲁棒关联算法，充分考虑了局部结构一致性、全局模式一致性以及时间序列一致性。另外，提出了基于滑动窗口的因子图优化框架，对特征关联结果以及里程计信息进行融合与优化。
 
@@ -56,154 +56,171 @@ Semantic SLAM 相关方案调研.
 -	论文未涉及实时性评估，并提到在未来工作中希望扩展框架来实现实时定位，因此推测目前算法不具备实时性。
 
 
+## 轻量语义地图定位
+
+[Tong Qin, Yuxin Zheng, Tongqing Chen, Yilun Chen, and Qing Su. A Light-Weight Semantic Map for Visual Localization towards Autonomous Driving. 2021 IEEE International Conference on Robotics and Automation (ICRA 2021).](https://ieeexplore.ieee.org/document/9561663)
+
+针对自动驾驶领域依赖于高精度传感器和高精地图的现状，论文提出轻量语义地图定位方案，使用低成本传感器以及轻量视觉语义地图完成定位。地图中包含若干语义元素，例如车道线、人行横道线、停车线等等。论文提出了车端建图、云端维护以及用户端定位的框架。建图所需数据是由车端传感器进行采集以及预处理，然后上传到云端服务器进行信息融合，并更新语义地图，最后语义地图经过压缩后，再传到用户端并用于用户车辆的定位。
+
+### 方法流程
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2022-03-31-img2.png)
+
+车端建图算法：
+
+- 使用CNN方法进行图像的语义分割，分割类别包括：地面、车道线、停止线和道路标线。
+
+- 对于分割结果，通过逆投影变换将带有语义标签的地面像素点投影到车体坐标系。
+
+- 通过因子图优化算法，融合了里程计约束和GNSS约束，对车体位姿序列进行优化。
+
+- 使用图优化得到的车体位姿结果，将语义特征从车体坐标系变换到全局坐标系，完成车端的局部建图。
+
+云端建图算法：
+
+- 地图融合与更新。云端服务器接收不同车端的局部建图结果，并根据车体位置对地图进行融合与更新。地图是以栅格地图的形式进行保存，栅格大小0.1×0.1×0.1m。
+
+- 地图压缩。考虑用户端有限的传输带宽和车载存储，云端对地图进行压缩后发送给用户端使用。地图压缩是通过轮廓提取完成的，如下图所示。
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2022-03-31-img3.png)
+
+用户端定位算法：
+
+- 用户端车辆搭载低成本传感器，例如摄像头、低精度GPS、IMU以及轮速计。
+
+- 地图解压缩，即利用从云端下载的压缩地图中的轮廓信息，对语义地图进行恢复。
+
+- 使用ICP匹配算法进行定位，并使用EKF算法对视觉定位结果与里程推算结果进行融合。
+
+### 关键技术
+
+-	算法利用云端服务器对多车端的建图结果进行融合，生成全局语义地图，一方面有利于使用多个车端进行较大规模的地图构建，另一方面也利用了云端服务器更好的处理性能和存储空间。
+
+-	用户端使用从云端下载的压缩地图进行车体定位，可以更好地适应用户端的低成本传感器配置。
+
+-	算法提出基于轮廓信息的语义地图压缩方法，可以使地图的传输更加高效。
+
+
+### 性能分析
+
+-	算法在22km的城市道路上进行建图，原始语义地图的大小为16.7MB，压缩语义地图大小为0.786MB，平均36KB/KM。
+
+-	基于建图结果，x轴平均定位误差为0.043m，y轴平均定位误差为0.040m，yaw角平均误差为0.124deg。
+
+
+## 轻量语义网格建图
+
+[Markus Herb, Tobias Weiherer, Nassir Navab and Federico Tombari. Lightweight Semantic Mesh Mapping for Autonomous Vehicles. 2021 IEEE International Conference on Robotics and Automation (ICRA 2021).](https://ieeexplore.ieee.org/document/9560996)
+
+论文提出轻量语义地图构建方案，直接使用单目或双目相机，以3D网格的形式构建轻量语义地图，融合传统基于特征的视觉里程计方法以及深度预测、语义图像分割方法，对语义相关的环境结构进行识别和重构。通过概率融合框架，使用语义标签增量式优化和拓展3D网格结构。
+
+### 方法流程
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2022-03-31-img4.png)
+
+系统使用ORB-SLAM2作为视觉里程计，并利用其输出的关键帧作为建图系统的输入。基于视觉里程计的结果，建图系统进行增量式网格地图构建，每一个更新步骤的输入为经过语义分割和深度计算的关键帧图像，输出轻量语义网格地图。
+
+关键帧图像语义分割与深度计算：
+
+- 使用PSPNet算法对图像进行语义分割，像素对应深度值可以通过双目视觉或者深度预测算法进行计算。
+
+单帧网格结构提取：
+
+- 基于已知的单帧数据语义分割结果，提取2D三角网格结构M_F=(V_F,F_F)，其中V_F表示2D节点，F_F表示面片元素，每个面片均以分割得到语义标签来进行标记。对于提取结果中面积较大的三角面片，进一步进行Delaunay分割，使得三角网格中每个面片的边长与夹角都控制在一定范围内。
+
+- 通过将语义标签相同的面片进行聚类，得到语义结构单元，并针对边缘处深度值计算准确性不高的区域，根据聚类结果对深度值的计算结果进行进一步地优化。
+
+网格地图初始化：
+- 基于计算的深度值信息，可以将2D三角网格M_F转换为3D网格M_M=(V_M,F_M)，并计算节点的空间不确定性，以及每个3D面片的语义标签。
+
+语义网格匹配：
+
+- 将当前帧提取的网格结构与网格地图进行匹配，具体而言，将地图中的3D网格节点投影到当前帧的2D图像中，并与当前帧中提取出的2D网格进行匹配。考虑节点在空间的不确定性，匹配误差定义为2D节点之间的马氏距离。
+
+语义网格融合：
+
+- 基于当前帧提取的2D网格结构与3D网格地图的匹配结果，利用当前帧提取的网格分割结果M_F对3D网格地图M_M进行更新。
+
+- 找到地图中与当前帧网格具有匹配关系的网格结构，并将其投影到当前帧图像平面上。
+
+- 在具有匹配关系的当前帧网格以及重投影地图网格结构中，找到具有不同语义标签的网格面片，定义为冲突结构，并利用这些冲突结构，对地图网格中的语义标签进行相应的更新。
+
+- 基于匹配网格结构的节点位置以及深度估计，对地图中网格节点的分布进行更新。
+
+### 关键技术
+
+-	算法采用带有语义标签的三角网格结构作为地图的表达形式，相比于栅格结构的地图，三角网格划分具有更高的灵活性，甚至能够直接通过网格结构的合并，进行语义物体的划分。相对地，其劣势是会消耗更多的存储空间与计算资源。
+
+- 	在进行地图匹配与更新时，重投影过程采用3D到2D的投影，匹配过程是在2D空间中完成，再通过2D到3D的投影，来完成地图的更新，这样一来，可以在匹配的过程中降低运算量，而在地图更新的过程中保留地图的三维空间结构。
+
+### 算法性能：
+
+- 论文对语义标签的准确率、召回率及F-Score进行统计，对于不同类别的语义标签，F-Score值的范围为50.1-89.5%。
+
+-	建图算法的运行时间为平均每帧200ms。
+
+
+## 稀疏语义特征建图与定位
+
+[Wentao Cheng, Sheng Yang, Maomin Zhou, Ziyuan Liu, Yiming Chen, Mingyang Li. Road Mapping and Localization using Sparse Semantic Visual Features. IEEE ROBOTICS AND AUTOMATION LETTERS. 2021.](https://ieeexplore.ieee.org/document/9387091)
+
+面向自动驾驶问题，提出基于语义道路元素提取、建模和优化的视觉建图和定位算法。不同于传统的点特征，算法使用级联式深度模型，检测标准化道路元素，并针对不同类型的元素进行特征参数化。基于道路语义特征，建立完整的建图与定位系统，包括前端图像处理、传感器融合策略以及后端优化。
+
+### 方法流程
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2022-03-31-img5.png)
+
+系统采用离线建图与在线定位策略，构建的地图中包含三种主要类别：1. 路灯和交通信号灯等在直立杆上，容易被前置相机捕捉到的物体；2. 路面标识；3. 车道线(包含实线和虚线)。
+
+在离线建图的过程中，对每一个关键帧进行语义特征的提取与跟踪，并进行多帧数据关联，以及对相机轨迹与特征位置的联合估计。接着，通过闭环检测的方法，对重复观测的语义元素进行再识别与融合。
+
+对于在线定位过程，特征提取模块以较低速率运行，以适应低成本计算单元。通过特征提取与跟踪策略得到语义特征的估计结果，并将其应用在基于里程计系统的滑动窗口优化中，从而减少全局的漂移现象。
+
+道路特征提取：
+
+- 使用CenterNet特征提取方法，对于特征形状的语义元素，提取其代表性索引像素，而对于车道线，则在线轮廓处采样得到一系统采样像素，作为语义特征的描述。对于虚线型的车道线，则进一步提取虚线角点索引像素。下图给出了几种特征描述的示意图。
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2022-03-31-img6.png)
+
+语义特征跟踪算法：
+
+- 通过IMU预积分得到两帧之间的相对位姿变换\\(T'\\)。
+
+- 对于地面平面上的语义特征，使用重投影方式将一个像素点\\(p\\)投影到另一帧\\(p'\\)。
+
+- 使用Hungarian匹配算法对地面特征分别进行物体级与像素级的关联。物体级关联通过计算交并比来完成，而对于像素级关联，则是通过像素之间的重投影距离进行关联。
+
+- 使用光流法对提取出的特征点进行跟踪。
+
+状态估计方法：
+
+基于提取与跟踪的语义特征，在优化的因子图里加入三种约束：
+
+- 特征点观测因子，即语义特征点的重投影误差。
+
+- 样条曲线观测因子，即样条曲线上采样点的重投影误差。
+
+- 先验共面因子，即语义特征点之间的共面约束。
+
+###	关键技术：
+
+-	算法提供语义特征参数化方案，对于不同类型的特征，采取不同的参数化方法，例如，对于特定形状的标记，提取结构特征点对其进行表征，而对于车道线，则在轮廓线上进行采样，并拟合样条曲线进行参数化。
+
+-	在优化因子图中，根据语义特征的类别，加入不同的约束因子，以及针对地面上语义特征之间的共面约束，共同进行优化。
+
+###	算法性能：
+
+-	在KAIST-38数据集上的实验结果，对于1.54MB的地图，可以达到0.46m的定位精度，相比而言，传统方法7.60MB的地图只能达到0.75m的定位精度。
+
+-	在定位模块中，平均的算法运行时间大概为300ms，即能达到3Hz的运行速率。
+ 
 
 
 
 
-## Compensation of aircraft magnetic fields
 
-link:
-[Compensation of aircraft magnetic fields (US2692970A, Walter E Tolles)](https://patents.google.com/patent/US2692970A)
 
-![img](http://sunqinxuan.github.io/images/posts-research-journal-2024-04-03-img2.png)
 
-> This invention relates to compensation of 
-magnetic fields, and more particularly to the 
-compensation of the effect in a given direction of the
-magnetic field of an aircraft due to all sources.
-
-> Considering the nature of the total magnetic
-field of an aircraft, it will be seen that this 
-magnetic field may be due to contributions from
-several sources which produce magnetic field
-components of different types. <u>Ferromagnetic
-elements in the aircraft structure having high
-retentivities become permanently magnetized and
-each of then produces a magnetic field.</u> The sum
-of all of these permanent magnetic field com
-ponents is known as the **"perm" magnetic field** of
-the aircraft and is <u>constant in magnitude and in
-direction in respect to the aircraft</u>.
-
-> <u>"Soft" ferromagnetic elements in the aircraft
-structure are magnetized through induction by
-the earth's magnetic field and each set up an
-induced magnetic field which varies in magnitude
-and direction with the geographical location of
-the aircraft and its attitude in space.</u> The total
-**induced imagnetic field** of the aircraft is the sum
-of the induced fields of all "soft" ferromagnetic
-structural elements, and its contribution to the
-total magnetic field of the aircraft is accordingly
-complex in nature.
-
-> <u>Additional contributions to the total magnetic
-field of the aircraft are produced by eddy 
-currents which are induced in sheet conductors, as
-for example in the metal skin forming portions
-of the aircraft, or in metallic loops, such as 
-control cable assenblies, whenever the attitude of the
-aircraft changes.</u> The total **eddy-current 
-magnetic field** contribution will thus be understood to
-depend in a complex way upon the geographical
-location of the aircraft, upon its attitude in space,
-and upon the rate of change of the attitude of
-the aircraft.
-
-> When the measuring instrument installed in
-the aircraft is a portable magnetometer of the
-type including a magnetometer element and 
-<u>arranged to be continuously oriented in the 
-direction of the earth's magnetic field and to measure
-magnetic field components in that direction only</u>,
-special problems are encountered. Since the
-magnetornetter element is so oriented as to 
-maintain a substantially constant attitude in space,
-the portion of the total magnetic field of the 
-aircraft affecting the output of the magnetometer
-will also vary with the attitude of the aircraft
-in space.
-
-Note that the original Tolles-lawson is not applied on a strapdown system.
-
-> It is an object of the present invention to 
-provide means whereby the various magnetic fields
-contributing to the total magnetic field of an 
-aircraft may, each in the presence of the other, be
-compensated for their effect <u>on a magnetometer
-arranged to measure magnetic fields in the 
-direction of the earth's magnetic field</u>.
-
-> Accordingly, there is provided a method of
-compensating the magnetic field of an aircraft to
-facilitate operation of a magnetometer mounted
-therein for measuring magnetic field components
-in a chosen direction which includes <u>choosing a
-set of reference axes in respect to the aircraft;
-resolving the perm, induced, and eddy-current
-imagnetic fields of the aircraft into components
-along these axes;</u> choosing a series of maneuvers
-such that the output of the magnetometer is in
-each case due to identifiable components of the
-perm and induced magnetic fields, and to at
-least one eddy-current magnetic field component; 
-performing each maneuver of the series in
-turn, temporarily eliminating the effect of the
-perm and induced magnetic field components on
-the magnetometer for each maneuver, and 
-compensating the eddy-current magnetic field 
-conponent thus identified; thereafter performing a
-second set of maneuvers such that the output of
-the magnetometer is due in the case of each
-maneuver to identifiable components of the perm
-and induced magnetic fields; and compensating
-each of these components as identified.
-
-> Referring to Fig. 1, a set of orthogonal 
-reference axes x, y and z is chosen in respect to the
-aircraft. <u>Conveniently, the reference system 
-including these axes has its origin at the location
-of the magnetometer element and is so chosen
-that the x, y and z axes are parallel respectively
-to the transverse, longitudinal and vertical axes
-of the aircraft.</u> Angles X, Y and Z are direction
-angles indicating respectively the orientation of
-the x, y and z axes in respect to the earth's 
-magnetic Vector designated in the drawing by the
-arrow marked H.
-
-> The total magnetic field due to all permanently
-magnetized structures in the aircraft may be 
-resolved into three components T, L and V, parallel
-respectively to the x, y and z axes.
-
-$$
-\vec{H}_p=T\vec{i}+L\vec{j}+V\vec{k}
-$$
-
-> Since the magnetometer is arranged to measure
-only magnetic field components in the direction
-of the earth's magnetic field, the total perm 
-magnetic field \\(\vec{H}_p\\) may be resolved in the direction
-of the earth's magnetic vector H. The effective
-perm magnetic field \\(H_{pd}\\) is then
-
-$$
-H_{pd}=T\cos X+L\cos Y+V\cos Z
-$$
-
-> The induced magnetic field of an aircraft 
-effective in the direction of the earth's magnetic field
-is given by the following expression.
-
-$$
-\begin{aligned}
-H_{ip}=&H[TT\cos^2X+(LT+TL)\cos X\cos Y \\
-&+LL\cos^2Y+(VT+TV)\cos X\cos Z \\
-&+VV\cos^2Z+(LV+VL)\cos Y\cos Z]
-\end{aligned}
-\tag{3}
-$$
 
 
 
