@@ -261,16 +261,20 @@ img3.jpg
 ```
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img8.png" alt="1632292117.299239" style="zoom:50%;" />
-<div><center>图3.2.1 右视鱼眼相机外参标定图像</center></div>
+
+图3.2.1 右视鱼眼相机外参标定图像
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img9.png" alt="1632292117.299239" style="zoom:50%;" />
-<div><center>图3.2.2 前视鱼眼相机外参标定图像</center></div>
+
+图3.2.2 前视鱼眼相机外参标定图像
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img10.png" alt="1632292117.299239" style="zoom:50%;" />
-<div><center>图3.2.3 左视鱼眼相机外参标定图像</center></div>
+
+图3.2.3 左视鱼眼相机外参标定图像
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img11.png" alt="1632292117.299239" style="zoom:50%;" />
-<div><center>图3.2.4 后视鱼眼相机外参标定图像</center></div>
+
+图3.2.4 后视鱼眼相机外参标定图像
 
 按上述方式组织好采集的标定图像后，运行`image_to_msg`节点，发布标定图像，发布话题为`/cv_camera_${camera}/image_raw`以及`/cv_camera_${camera}/camera_info`。
 
@@ -286,19 +290,19 @@ roslaunch apriltag_ros continuous_detection.launch
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img12.jpg" alt="right" style="zoom:50%;" />
 
-<div><center>图3.2.5 右视鱼眼相机AprilTag检测结果</center></div>
+图3.2.5 右视鱼眼相机AprilTag检测结果
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img13.jpg" alt="front" style="zoom:50%;" />
 
-<div><center>图3.2.6 前视鱼眼相机AprilTag检测结果</center></div>
+图3.2.6 前视鱼眼相机AprilTag检测结果
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img14.jpg" alt="left" style="zoom:50%;" />
 
-<div><center>图3.2.7 左视鱼眼相机AprilTag检测结果</center></div>
+图3.2.7 左视鱼眼相机AprilTag检测结果
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img15.jpg" alt="rear" style="zoom:50%;" />
 
-<div><center>图3.2.8 后视鱼眼相机AprilTag检测结果</center></div>
+图3.2.8 后视鱼眼相机AprilTag检测结果
 
 在确保AprilTag正常检测后，运行`localize`节点，对定位结果进行整合，并通过已知tag bundle坐标系之间的转换关系，最终得到四个环视相机相对于地面标定布十字交点(即车体右后轮中心)的位置和姿态，并保存为`calib_extrinsic.yaml`文件。
 
