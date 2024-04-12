@@ -1,5 +1,5 @@
 ---
-title: '【Research journal】Semantic SLAM 相关方案调研'
+title: 'Semantic SLAM 相关方案调研'
 date: 2022-03-31
 permalink: /posts/research-journal-2022-03-31-semantic-slam/
 tags:
@@ -9,86 +9,56 @@ tags:
 Semantic SLAM 相关方案调研.
 
 
-## Compensation of induced magnetic fields
+## 高精地图语义定位
 
-link:
-[Compensation of induced magnetic fields (US2834939A, Walter E Tolles)](https://patents.google.com/patent/US2834939)
+[[1]	Huayou Wang, Changliang Xue, Yanxing Zhou, Feng Wen and Hongbo Zhang. Visual Semantic Localization based on HD Map for Autonomous Vehicles in Urban Scenarios. 2021 IEEE International Conference on Robotics and Automation (ICRA 2021).](https://ieeexplore.ieee.org/document/9561459)
 
-![img](http://sunqinxuan.github.io/images/posts-research-journal-2024-04-03-img1.png)
+论文提出基于高精地图和语义特征的视觉主义定位算法。在城市道路环境中，语义特征易于提取，并且对光照、天气和视角等变化有着一定的鲁棒性。针对语义特征关联问题，提出了鲁棒关联算法，充分考虑了局部结构一致性、全局模式一致性以及时间序列一致性。另外，提出了基于滑动窗口的因子图优化框架，对特征关联结果以及里程计信息进行融合与优化。
 
-I read this patent for the derivation of the eq.(3) in Patent US2692970A.
+### 方法流程
 
-> This invention relates to compensation systems, and
-more particularly to methods of and means for 
-compensating the induced magnetic fields of aircraft.
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2022-03-31-img1.png)
 
-> The total induced magnetic field due to all soft magnetic 
-parts of an aircraft structure may be reproduced by
-<u>a system of three suitable virtual bars oriented in chosen
-directions in respect to the aircraft</u>. Referring to Fig. 1,
-<u>the aircraft is shown at the origin of a coordinate system
-in which the x, y and z axes are parallel respectively to
-the transverse, longitudinal and vertical axes of the 
-aircraft</u>. The three virtual bars mentioned above may be
-chosen in such fashion that one of them is parallel to
-each of these reference axes, the bar parallel to the x axis.
-being designated the transverse bar, that parallel to they
-axis being designated the longitudinal bar, and that par
-allel to the z axis being designated the vertical bar.
+视觉图像语义特征提取：
 
-> Accordingly, <u>a double-letter system is used in which the first letter 
-indicates the orientation of the bar causing the field 
-component and the second letter indicates the direction of
-the component caused thereby</u>. Thus the transverse bar
-which produces components in the transverse, 
-longitudinal and vertical directions may result in components
-designated as TT, TL and TV. Similarly, there will be
-other components designated LL, LV, LT, VV, VL and
-VT. The components acting along each of the three
-reference axes have been indicated in Fig. 1.
+- 这使用卷积神经网络方法YOLOV3，提取道路标识、电线杆、交通灯和指示牌作为语义特征。提取出的语义特征描述子为\\(s_t=(s_t^l,s_t^c,s_t^b)\\)，其中\\(s_t^l\\)表示语义类别，\\(s_t^c\\)表示置信度，\\(s_t^b\\)表示特征的几何描述信息。
 
-For better understanding, I rewrite the eq.(1) in the patent as
+与高精地图的语义特征关联：
 
-$$
-\begin{aligned}
-\vec{H}_I&=\vec{i}(TT\cdot H\cos X+LT\cdot H\cos Y+VT\cdot H\cos Z) \\
-&+\vec{j}(TL\cdot H\cos X+LL\cdot H\cos Y+VL\cdot H\cos Z) \\
-&+\vec{k}(TV\cdot H\cos X+LV\cdot H\cos Y+VV\cdot H\cos Z)
-\end{aligned}
-$$
+- 在先验位姿附近采样生成候选位姿，对于每一个候选位姿，进行地图特征到当时图像帧的投影。
 
-where \\(H\cos Y\\) represents the projection of the earth magnetic field onto the x axis (transverse virtual bar), and \\(TL\\) is the coefficient of the induced magnetic field caused by the transverse component (1st letter) on the longitudinal direction (2nd letter).
+- 基于局部结构一致性的粗关联过程，根据特征在横向位置的分布情况，去除明显的误关联结果。
 
-> Of the total induced field, only the component in the
-direction of the earth's magnetic field affects the 
-operation of a magnetometer arranged to measure components
-in the direction of the earth's magnetic field. <u>Resolving
-the field of Equation 1 in the direction of the earth's
-magnetic field</u> results in an expression of the following
-form:
+- 对粗关联结果进行进一步优化，融合匹配数据、匹配相似度和局部结构相似性等信息，得到最优的全局一致关联结果。
 
-$$
-H_{ID}=
-\begin{bmatrix}
-\cos X & \cos Y & \cos Z
-\end{bmatrix}
-\vec{H}_I 
-$$
+- 在时间相邻的图像序列上对特征进行跟踪。
 
-Expanding the above equation yields eq.(3) in Patent US2692970A.
+- 通过时间域平滑过程，得到时间一致性的特征关联结果。
 
-> Each term on the right-hand side of Equation 2 
-represents a component of induced field acting in the direction
-of the earth's magnetic field which must be compensated
-if satisfactory operation of the magnetometer is to be
-obtained. <u>In each of these terms, the double-letter co
-efficient (TT, VV, etc.) is a constant which is determined
-by the structural characteristics of the aircraft</u> and by
-which the magnitude of the earth's field must be 
-multiplied to give the magnitude of the particular component,
-while <u>the trigonometric argument in each case indicates
-the manner in which this amplitude varies as the aircraft
-maneuvers</u>.
+位姿图优化：
+
+- 对于滑动窗口内的帧，使用非线性优化方法对位姿估计结果进行优化。具体误差项包括：里程计误差、观测重投影误差和地图特征匹配误差。
+
+### 关键技术
+
+-	算法提供基于高精地图和语义特征的定位方案，在进行局部地图构建的同时，完成局部地图特征与第三方高精地图特征的关联和匹配，为语义SLAM建图结果适配第三方高精地图的需求提供了一种可选的解决方案。
+
+-	算法提出了具有时空一致性的语义特征关联方法，针对不同类型的语义特征，如果交通信号灯、指示牌等，采用不同的高层特征描述方法。
+
+-	通过往图优化算法中加入提取特征与地图特征的匹配情况，完成基于高精地图的定位。
+
+### 性能分析
+
+-	算法在30km范围的城市道路中，可以达到0.43m的纵向定位精度，0.12m的横向定位精度，以及0.11deg的俯仰角精度。
+
+-	算法主要依赖于低成本传感器，满足传感器成本的商业化需求。
+
+-	论文未涉及实时性评估，并提到在未来工作中希望扩展框架来实现实时定位，因此推测目前算法不具备实时性。
+
+
+
+
+
 
 ## Compensation of aircraft magnetic fields
 

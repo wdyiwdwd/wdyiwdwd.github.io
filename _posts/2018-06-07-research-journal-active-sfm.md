@@ -1,5 +1,5 @@
 ---
-title: '【Research journal】Active Structure from Motion'
+title: 'Active Structure from Motion'
 date: 2018-06-07
 permalink: /posts/research-journal-2018-06-07-active-sfm/
 tags:

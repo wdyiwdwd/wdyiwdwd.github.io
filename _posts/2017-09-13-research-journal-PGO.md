@@ -1,5 +1,5 @@
 ---
-title: '【研究工作记录】基于位姿图的后端优化实现方案'
+title: '基于位姿图的后端优化实现方案'
 date: 2017-09-13
 permalink: /posts/research-journal-2017-09-PGO/
 tags:

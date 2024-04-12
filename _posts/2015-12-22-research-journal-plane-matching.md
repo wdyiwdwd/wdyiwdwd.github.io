@@ -1,5 +1,5 @@
 ---
-title: '【研究工作记录】平面配准相关方案与实验记录'
+title: '平面配准相关方案与实验记录'
 date: 2015-12-22
 permalink: /posts/research-journal-2015-12-22-plane-matching/
 tags:

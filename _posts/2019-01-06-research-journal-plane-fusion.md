@@ -1,5 +1,5 @@
 ---
-title: '【Research journal】Plane Fusion'
+title: 'Plane Fusion'
 date: 2019-01-06
 permalink: /posts/research-journal-2019-01-06-plane-fusion/
 tags:

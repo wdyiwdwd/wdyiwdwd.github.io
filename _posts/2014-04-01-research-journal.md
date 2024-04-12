@@ -1,5 +1,5 @@
 ---
-title: '【研究工作记录】点云配准'
+title: '点云配准'
 date: 2014-04-01
 permalink: /posts/research-journal-2014-04/
 tags:

@@ -1,5 +1,5 @@
 ---
-title: '【Research journal】Plane Feature and Projective Shadow based SLAM'
+title: 'Plane Feature and Projective Shadow based SLAM'
 date: 2017-07-07
 permalink: /posts/research-journal-2017-07-07-pfps-slam/
 tags:

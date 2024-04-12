@@ -1,5 +1,5 @@
 ---
-title: '【研究工作记录】日本前桥工科大学交流'
+title: '日本前桥工科大学交流'
 date: 2015-09-29
 permalink: /posts/research-journal-2015-09-Maebashi/
 tags:

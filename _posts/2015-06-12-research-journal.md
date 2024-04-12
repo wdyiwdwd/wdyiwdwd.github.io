@@ -1,5 +1,5 @@
 ---
-title: '【研究工作记录】点云预处理'
+title: '点云预处理'
 date: 2015-06-12
 permalink: /posts/research-journal-2015-06/
 tags:

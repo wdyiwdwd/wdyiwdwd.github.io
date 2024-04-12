@@ -1,5 +1,5 @@
 ---
-title: '【研究工作记录】相关文献调研'
+title: '相关文献调研'
 date: 2013-09-29
 permalink: /posts/research-journal-2013-09/
 tags:

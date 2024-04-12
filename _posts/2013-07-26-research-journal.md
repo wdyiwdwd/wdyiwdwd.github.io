@@ -1,5 +1,5 @@
 ---
-title: '【研究工作记录】点云融合'
+title: '点云融合'
 date: 2013-07-26
 permalink: /posts/research-journal-2013-07/
 tags:
