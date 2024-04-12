@@ -25,8 +25,14 @@ location: "Beijing, China"
 为了兼容相机-车体外参标定中所使用的AprilTag定位代码，采用[OpenCV fisheye](https://docs.opencv.org/3.4/db/d58/group__calib3d__fisheye.html)模型对鱼眼相机内参进行标定。对于一个在相机坐标系下的3D点\\(X_c=(x,y,z)^T\\)，令
 
 $$
-a=\frac{x}{z},\ b=\frac{y}{z}\\
-r=\sqrt{a^2+b^2}\\
+a=\frac{x}{z},\ b=\frac{y}{z}
+$$
+
+$$
+r=\sqrt{a^2+b^2}
+$$
+
+$$
 \theta=\arctan(r)
 $$
 
@@ -39,14 +45,20 @@ $$
 经过模型畸变后，3D点在归一化平面的坐标\\((x',y')^T\\)为
 
 $$
-x'=\left(\frac{\theta_d}{r}\right)a \\
+x'=\left(\frac{\theta_d}{r}\right)a 
+$$
+
+$$
 y'=\left(\frac{\theta_d}{r}\right)b
 $$
 
 最后鱼眼图像上的像素坐标\\((u,v)^T\\)为
 
 $$
-u=f_x\left(x'+\alpha y'\right)+c_x \\
+u=f_x\left(x'+\alpha y'\right)+c_x 
+$$
+
+$$
 v=f_y y'+c_y
 $$
 
@@ -59,19 +71,15 @@ $$
 在进行相机内参标定时，首先对四个鱼眼相机分别进行标定数据的采集，如图2.2.1-图2.2.4所示。在进行数据采集时，应尽量使得标定板在各个维度进行相应的运动，在不离开视野区域的前提下，运动范围尽量遍布相机视野。
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img3.png" alt="1631690453.359431" style="zoom:50%;" />
-
 <div><center>图2.2.1 右视鱼眼相机内参标定图像</center></div>
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img4.png" alt="1631690077.724006" style="zoom:50%;" />
-
 <div><center>图2.2.2 前视鱼眼相机内参标定图像</center></div>
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img5.png" alt="1631690300.334805" style="zoom:50%;" />
-
 <div><center>图2.2.3 左视鱼眼相机内参标定图像</center></div>
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img6.png" alt="1631690343.138452" style="zoom:50%;" />
-
 <div><center>图2.2.4 后视鱼眼相机内参标定图像</center></div>
 
 在标定图像采集完成后，在工程目录下建立`img_${camera}`文件夹存放采集好的标定图像，并生成`img_${camera}.txt`文件，列出所有标定图像的相对路径。以右视相机为例，标定图像存放在`./img_right`目录下，其对应的`./img_right.txt`文件内容为：
@@ -136,7 +144,10 @@ K=
 f_x & 0 & c_x \\
 0 & f_y & c_y \\
 0 & 0 & 1
-\end{bmatrix} \\
+\end{bmatrix}
+$$
+
+$$
 D=
 \begin{bmatrix}
 k_1 & k_2 & k_3 & k_4 
@@ -151,7 +162,10 @@ K_{right}=
 429.74 & 0 & 619.23 \\
 0 & 429.84 & 401.93 \\
 0 & 0 & 1
-\end{bmatrix} \\
+\end{bmatrix}
+$$
+
+$$
 D_{right}=
 \begin{bmatrix}
 0.299 & 0.073 & -0.069 & 0.010 
@@ -164,7 +178,10 @@ K_{front}=
 433.16 & 0 & 595.30 \\
 0 & 432.75 & 386.14 \\
 0 & 0 & 1
-\end{bmatrix} \\
+\end{bmatrix} 
+$$
+
+$$
 D_{front}=
 \begin{bmatrix}
 0.309 & 0.063 & -0.040 & -0.012 
@@ -177,7 +194,10 @@ K_{left}=
 431.10 & 0 & 614.08 \\
 0 & 431.83 & 399.31 \\
 0 & 0 & 1
-\end{bmatrix} \\
+\end{bmatrix} 
+$$
+
+$$
 D_{left}=
 \begin{bmatrix}
 0.304 & 0.116 & -0.136 & 0.043
@@ -190,7 +210,10 @@ K_{rear}=
 431.71 & 0 & 654.41 \\
 0 & 431.32 & 389.04 \\
 0 & 0 & 1
-\end{bmatrix} \\
+\end{bmatrix} 
+$$
+
+$$
 D_{rear}=
 \begin{bmatrix}
 0.299 & 0.085 & -0.090 & 0.022
@@ -234,19 +257,15 @@ img3.jpg
 ```
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img8.png" alt="1632292117.299239" style="zoom:50%;" />
-
 <div><center>图3.2.1 右视鱼眼相机外参标定图像</center></div>
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img9.png" alt="1632292117.299239" style="zoom:50%;" />
-
 <div><center>图3.2.2 前视鱼眼相机外参标定图像</center></div>
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img10.png" alt="1632292117.299239" style="zoom:50%;" />
-
 <div><center>图3.2.3 左视鱼眼相机外参标定图像</center></div>
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img11.png" alt="1632292117.299239" style="zoom:50%;" />
-
 <div><center>图3.2.4 后视鱼眼相机外参标定图像</center></div>
 
 按上述方式组织好采集的标定图像后，运行`image_to_msg`节点，发布标定图像，发布话题为`/cv_camera_${camera}/image_raw`以及`/cv_camera_${camera}/camera_info`。
@@ -301,7 +320,10 @@ $$
 \boldsymbol t_{wc\_right}=
 \begin{bmatrix}
 0.857 & -1.329 & 1.707
-\end{bmatrix}^T \\
+\end{bmatrix}^T 
+$$
+
+$$
 \boldsymbol q_{wc\_right}=
 \begin{bmatrix}
 -0.003 & 0.012 & 0.859 & -0.510 
@@ -312,7 +334,10 @@ $$
 \boldsymbol t_{wc\_front}=
 \begin{bmatrix}
 3.472 & -0.731 & 0.925 
-\end{bmatrix}^T \\
+\end{bmatrix}^T 
+$$
+
+$$
 \boldsymbol q_{wc\_front}=
 \begin{bmatrix}
 0.329 & -0.623 & 0.624 & -0.335
@@ -323,7 +348,10 @@ $$
 \boldsymbol t_{wc\_left}=
 \begin{bmatrix}
 0.843 & -0.220 & 1.725
-\end{bmatrix}^T \\
+\end{bmatrix}^T 
+$$
+
+$$
 \boldsymbol q_{wc\_left}=
 \begin{bmatrix}
 0.520 & -0.853 & 0.001 & 0.001
@@ -334,7 +362,10 @@ $$
 \boldsymbol t_{wc\_rear}=
 \begin{bmatrix}
 -0.778 & -0.771 & 1.236
-\end{bmatrix}^T \\
+\end{bmatrix}^T 
+$$
+
+$$
 \boldsymbol q_{wc\_rear}=
 \begin{bmatrix}
 -0.348 & 0.602 & 0.629 & -0.345
