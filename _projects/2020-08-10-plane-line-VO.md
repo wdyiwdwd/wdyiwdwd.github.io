@@ -16,6 +16,7 @@ location: "Tianjin, China"
 
 ![img](https://sunqinxuan.github.io/images/projects-2020-08-10-img1.png)
 
+![img](https://sunqinxuan.github.io/images/projects-2020-08-10-img2.png)
 
 ## 相关链接
 
