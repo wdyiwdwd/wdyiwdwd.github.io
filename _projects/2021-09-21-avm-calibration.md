@@ -71,16 +71,20 @@ $$
 在进行相机内参标定时，首先对四个鱼眼相机分别进行标定数据的采集，如图2.2.1-图2.2.4所示。在进行数据采集时，应尽量使得标定板在各个维度进行相应的运动，在不离开视野区域的前提下，运动范围尽量遍布相机视野。
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img3.png" alt="1631690453.359431" style="zoom:50%;" />
-<div><center>图2.2.1 右视鱼眼相机内参标定图像</center></div>
+
+图2.2.1 右视鱼眼相机内参标定图像
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img4.png" alt="1631690077.724006" style="zoom:50%;" />
-<div><center>图2.2.2 前视鱼眼相机内参标定图像</center></div>
+
+图2.2.2 前视鱼眼相机内参标定图像
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img5.png" alt="1631690300.334805" style="zoom:50%;" />
-<div><center>图2.2.3 左视鱼眼相机内参标定图像</center></div>
+
+图2.2.3 左视鱼眼相机内参标定图像
 
 <img src="https://sunqinxuan.github.io/images/projects-2021-09-21-img6.png" alt="1631690343.138452" style="zoom:50%;" />
-<div><center>图2.2.4 后视鱼眼相机内参标定图像</center></div>
+
+图2.2.4 后视鱼眼相机内参标定图像
 
 在标定图像采集完成后，在工程目录下建立`img_${camera}`文件夹存放采集好的标定图像，并生成`img_${camera}.txt`文件，列出所有标定图像的相对路径。以右视相机为例，标定图像存放在`./img_right`目录下，其对应的`./img_right.txt`文件内容为：
 
