@@ -242,8 +242,6 @@ $$
 f_{h^{-1}Z}=\sum_{z_j\in Z}\mathcal{l}_Z(z_j)k(\cdot,h_{-1}z_j)
 $$
 
-其中\\(\mathcal{l}_X(x_i)\\)包含了纹理信息以及语义信息等，而\\(k(\cdot,x_i)\\)则表示了几何信息。\\(f_X\\)与\\(f_{h^{-1}Z}\\)的内积可以表示为
-
 $$
 \langle f_X,f_{h^{-1}Z}\rangle_{\mathcal{H}}=
 \sum_{x_i\in X,z_j\in Z}
