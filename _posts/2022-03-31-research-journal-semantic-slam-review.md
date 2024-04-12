@@ -364,7 +364,7 @@ $$
   {}^i{\bf x}_j-
   p({}^{c_i}{\bf T}_w\exp({\bf\Pi}{}^w\boldsymbol\xi_{o_i}){}^w{\bf T}_{o_{i-1}},
   {}^o{\bf X}_j)
-  \right\|_{{\\Sigma}^{-1}_{i,j}}
+  \right\|_{{\Sigma}^{-1}_{i,j}}
   \right)
   $$
 
