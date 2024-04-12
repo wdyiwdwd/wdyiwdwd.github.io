@@ -23,25 +23,33 @@ location: "Beijing, China"
 ### 2.1 鱼眼相机模型
 
 为了兼容相机-车体外参标定中所使用的AprilTag定位代码，采用[OpenCV fisheye](https://docs.opencv.org/3.4/db/d58/group__calib3d__fisheye.html)模型对鱼眼相机内参进行标定。对于一个在相机坐标系下的3D点\\(X_c=(x,y,z)^T\\)，令
+
 $$
 a=\frac{x}{z},\ b=\frac{y}{z}\\
 r=\sqrt{a^2+b^2}\\
 \theta=\arctan(r)
 $$
+
 鱼眼相机图像畸变模型可以表示为
+
 $$
 \theta_d=\theta\left(1+k_1\theta^2+k_2\theta^4+k_3\theta^6+k_4\theta^8\right)
 $$
+
 经过模型畸变后，3D点在归一化平面的坐标\\((x',y')^T\\)为
+
 $$
 x'=\left(\frac{\theta_d}{r}\right)a \\
 y'=\left(\frac{\theta_d}{r}\right)b
 $$
+
 最后鱼眼图像上的像素坐标\\((u,v)^T\\)为
+
 $$
 u=f_x\left(x'+\alpha y'\right)+c_x \\
 v=f_y y'+c_y
 $$
+
 其中\\(f_x,f_y,c_x,c_y\\)为相机的内参。
 
 ### 2.2 鱼眼相机内参标定方案
@@ -121,6 +129,7 @@ distortion_coefficients:
 ### 2.3 内参标定结果
 
 相机内参矩阵和畸变参数记为
+
 $$
 K=
 \begin{bmatrix}
@@ -133,7 +142,9 @@ D=
 k_1 & k_2 & k_3 & k_4 
 \end{bmatrix}
 $$
+
 四个环视相机以右下标的形式进行标识，记录内参标定结果如下：
+
 $$
 K_{right}=
 \begin{bmatrix}
@@ -285,6 +296,7 @@ pose_wheel_camera_rear: [-0.77796316183817105, -0.77092134403012258, 1.236666498
 假设\\(\boldsymbol t_{wc}\\)和\\(\boldsymbol q_{wc}\\)分别表示相机坐标系相对于标定布十字交叉处（即车体后轮）坐标系的平移和旋转变换，四个环视相机以右下标的形式进行标识。
 
 外参标定结果记录如下：
+
 $$
 \boldsymbol t_{wc\_right}=
 \begin{bmatrix}
