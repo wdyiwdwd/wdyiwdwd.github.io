@@ -399,3 +399,4 @@ Eigen::Matrix<float,6,6> ICPRegistration::GetCovariance()
 
 代码：
 - [pose-graph](https://github.com/sunqinxuan/pose-graph)
+- [semantic-gicp](https://github.com/sunqinxuan/semantic-gicp)
