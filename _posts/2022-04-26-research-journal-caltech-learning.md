@@ -653,8 +653,8 @@ void mcvFitRansacLine(const CvMat *image, int numSamples, int numIterations,
   float bestLineRTheta[2]={-1.f,0.f}, bestLineAbc[3];
   float bestScore=0, bestDist=1e5;
   float dist, score;
-  Line curEndPointLine={{-1.,-1.},{-1.,-1.}},
-  bestEndPointLine={{-1.,-1.},{-1.,-1.}};
+  Line curEndPointLine={ {-1.,-1.},{-1.,-1.}},
+  bestEndPointLine={ {-1.,-1.},{-1.,-1.}};
   //variabels for getting endpoints
   //int mini, maxi;
   float minc=1e5f, maxc=-1e5f, mind, maxd;
