@@ -26,7 +26,7 @@ typedef struct Line
 } Line;
 ```
 
-初始化二维直线参数$(r,\theta)$的Bins：
+初始化二维直线参数\\((r,\theta)\\)的Bins：
 
 ```c++
   //define the accumulator array: rows correspond to r and columns to theta
