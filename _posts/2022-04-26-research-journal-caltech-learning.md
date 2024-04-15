@@ -396,7 +396,7 @@ void mcvIntersectLineRThetaWithBB(FLOAT r, FLOAT theta, const CvSize bbox,
   }
 
   //points of intersection
-  FLOAT_POINT2D pts[4] = {{xup, 0},{xdown,bbox.height},
+  FLOAT_POINT2D pts[4] = { {xup, 0}, {xdown,bbox.height},
         {0, yleft},{bbox.width, yright}};
 
   //get the starting point
