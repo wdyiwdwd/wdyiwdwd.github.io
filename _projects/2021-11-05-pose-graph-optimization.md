@@ -20,11 +20,11 @@ $$
 r_{ij}=
 \begin{bmatrix}
 R(q_i)^T(p_j-p_i)-\hat{p}_{ij} \\
-2\cdot {\rm vec}\left((q_i^{-1}q_j)\hat{q}_{ij}^{-1}\right)
+2\cdot \rm{vec}\left((q_i^{-1}q_j)\hat{q}_{ij}^{-1}\right)
 \end{bmatrix}
 $$
 
-其中，\\({\rm vec}()\\)表示取四元数的虚部向量，即\\([q_x,q_y,q_z]^T\\)，\\(R(q)\\)表示四元数\\(q\\)所对应的旋转矩阵。相应代码实现在Functor类`EdgePoseError`中，用于Ceres `CostFunction`类中对残差向量以及对应雅可比的计算。
+其中，\\(\rm{vec}()\\)表示取四元数的虚部向量，即\\([q_x,q_y,q_z]^T\\)，\\(R(q)\\)表示四元数\\(q\\)所对应的旋转矩阵。相应代码实现在Functor类`EdgePoseError`中，用于Ceres `CostFunction`类中对残差向量以及对应雅可比的计算。
 
 ```c++
 	template <typename T>
@@ -104,9 +104,9 @@ $$
 $$
 \begin{aligned}
 & \frac{\partial r_{ij}}{\partial \xi_i}
-=-{\mathcal J}^{-1}(r_{ij}){\rm Ad}(T_j^{-1})\\
+=-{\mathcal J}^{-1}(r_{ij})\rm{Ad}(T_j^{-1})\\
 & \frac{\partial r_{ij}}{\partial \xi_j}
-={\mathcal J}^{-1}(r_{ij}){\rm Ad}(T_j^{-1})
+={\mathcal J}^{-1}(r_{ij})\rm{Ad}(T_j^{-1})
 \end{aligned}
 $$
 
@@ -326,7 +326,7 @@ $$
 
 $$
 \begin{aligned}
-&H=\frac{{\rm d}E^2(\hat{X})}{{\rm d}\hat{X}^2}=2M^TM \\
+&H=\frac{\rm{d}E^2(\hat{X})}{\rm{d}\hat{X}^2}=2M^TM \\
 &\rightarrow M^TM=\frac{1}{2}H
 \end{aligned}
 $$
