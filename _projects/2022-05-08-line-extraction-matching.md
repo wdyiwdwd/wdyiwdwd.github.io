@@ -558,7 +558,7 @@ bool LineFeatureExtractionRG::ComputeLocalLinearity(CloudData2D &cloud)
 
 #### 局部线性度伪排序
 
-局部线性度$\gamma\in[0,1]$，分为10个bins，按照局部线性度的大小，将2D语义点放入相应的bin中。
+局部线性度\\(\gamma\in[0,1]\\)，分为10个bins，按照局部线性度的大小，将2D语义点放入相应的bin中。
 
 ```c++
 bool LineFeatureExtractionRG::PseudoOrdering(CloudData2D &cloud, VecBins &pseudo_ordering_bins)
