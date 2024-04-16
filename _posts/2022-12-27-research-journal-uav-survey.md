@@ -14,8 +14,9 @@ tags:
 
 ## 型号列表
 
-<iframe src='https://docs.google.com/spreadsheets/d/1VewT8aULAJ9O1c9RVoygVYDiAwKbEY1GyFMnDzGOfyE/edit#gid=1495606623'>
+<iframe src='https://docs.google.com/spreadsheets/d/1VewT8aULAJ9O1c9RVoygVYDiAwKbEY1GyFMnDzGOfyE/edit#gid=1495606623' width='100%' height='100%'>
 </iframe>
+
 
 
 ## 相关链接
