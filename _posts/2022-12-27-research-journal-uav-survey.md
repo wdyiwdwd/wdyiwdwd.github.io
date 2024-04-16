@@ -14,4 +14,10 @@ tags:
 
 ## 型号列表
 
-<a href="http://sunqinxuan.github.io/files/research-journal-2022-12-27-list.xlsx">点击这里下载</a>
+<iframe src='https://docs.google.com/spreadsheets/d/1VewT8aULAJ9O1c9RVoygVYDiAwKbEY1GyFMnDzGOfyE/edit#gid=1495606623'>
+</iframe>
+
+
+## 相关链接
+
+[A small list of IMU / INS / INU](https://damien.douxchamps.net/research/imu/)
