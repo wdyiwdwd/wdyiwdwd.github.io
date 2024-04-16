@@ -1,11 +1,9 @@
 ---
 title: "无人机仿真平台搭建过程记录"
-collection: projects
-type: "Project"
-permalink: /projects/2023-02-23-uav-simulation
-venue: "ZJLab"
 date: 2023-02-23
-location: "Beijing, China"
+permalink: /posts/research-journal-2023-02-23-uav-simulation
+tags:
+  - research journal
 ---
 
 无人机仿真平台搭建过程记录
