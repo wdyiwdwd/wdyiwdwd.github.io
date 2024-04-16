@@ -61,7 +61,7 @@ LaneNet的输出是每条车道线的像素集合，还需要根据这些像素�
 
 ### 论文
 
-[[1902.00293v1\] End-to-end Lane Detection through Differentiable Least-Squares Fitting (arxiv.org)](https://arxiv.org/abs/1902.00293v1)
+[1902.00293v1\] End-to-end Lane Detection through Differentiable Least-Squares Fitting (arxiv.org)](https://arxiv.org/abs/1902.00293v1)
 
 ### 开源代码
 
