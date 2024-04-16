@@ -12,8 +12,6 @@ location: "Tianjin, China"
 
 ## 修炼爱情  Refining Love
 
-<br>
-
 *填词：易家扬*
 
 *谱曲：林俊杰*
