@@ -14,4 +14,4 @@ tags:
 
 ## 型号列表
 
-<iframe src="http://sunqinxuan.github.io/files/research-journal-2022-12-27-list.xlsx" width="600" height="400"></iframe>
+<a href="http://sunqinxuan.github.io/files/research-journal-2022-12-27-list.xlsx">点击这里下载</a>
