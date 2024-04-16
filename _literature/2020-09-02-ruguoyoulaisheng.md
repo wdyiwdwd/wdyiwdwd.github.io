@@ -8,8 +8,6 @@ date: 2020-09-02
 location: "Tianjin, China"
 ---
 
-<br>
-
 如果有来生
 
 我要终老在那个有你的小城

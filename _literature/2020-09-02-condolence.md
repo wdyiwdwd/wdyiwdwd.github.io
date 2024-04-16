@@ -2,7 +2,7 @@
 title: "庚子年中元悼亡诗"
 collection: literature
 type: "poem"
-permalink: /literature/literature-2020-09-02
+permalink: /literature/literature-2020-09-02-condolence
 venue: "孙沁璇"
 date: 2020-09-02
 location: "Tianjin, China"
