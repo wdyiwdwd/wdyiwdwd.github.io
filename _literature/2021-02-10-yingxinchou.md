@@ -1,5 +1,5 @@
 ---
-title: "中秋随感"
+title: "迎辛丑"
 collection: literature
 type: "poem"
 permalink: /literature/literature-2021-02-10
