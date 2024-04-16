@@ -1,7 +1,7 @@
 ---
 title: "【歌词翻译】王菲《执迷不悔》"
 collection: literature
-type: "essay"
+type: "lyrics"
 permalink: /literature/literature-2021-04-13
 venue: "孙沁璇"
 date: 2021-04-13

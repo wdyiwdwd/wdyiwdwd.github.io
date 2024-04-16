@@ -1,7 +1,7 @@
 ---
 title: "【歌词翻译】王菲《百年孤寂》"
 collection: literature
-type: "essay"
+type: "lyrics"
 permalink: /literature/literature-2021-04-16
 venue: "孙沁璇"
 date: 2021-04-16
