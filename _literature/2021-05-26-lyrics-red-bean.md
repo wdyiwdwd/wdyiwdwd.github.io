@@ -12,9 +12,9 @@ location: "Tianjin, China"
 
 ![红豆](https://sunqinxuan.github.io/images/literature-2021-05-26-img1.webp)
 
-<br>
-
 ## 红豆 Red Bean
+
+<br>
 
 *填词：林夕*
 
