@@ -14,9 +14,11 @@ location: "Tianjin, China"
 **少年游**
 
 激昂懵懂少年行，露草萤光明。
+
 玉栏软拂，花丛轻顾，转盼眼波生。
 
 聚散无过长行客，何必苦耽情。
+
 言尽人远，月移影灭，惟教意长横。
 
 ![苏幕遮](https://sunqinxuan.github.io/images/literature-2021-01-24-img1.webp)
@@ -25,11 +27,13 @@ location: "Tianjin, China"
 
 纵多愁，今且醉。
 命岂无觉，场场乾坤戏。
+
 彼世今生无限事。
 外化功成，未解深思义。
 
 住其心，观我意。
 尘虑纷纷，绝境空余泪。
+
 泛海浮沉终已矣。
 归去无端，俯首千金字。
 
@@ -38,11 +42,15 @@ location: "Tianjin, China"
 **破阵子**
 
 塞上霜寒凛冽，故园灯火零星。
+
 若教立足惟失所，此去将与天地盟。
+
 零丁千里行。
 
 漫漫穹庐作驿，嚣嚣恶语为兵。
+
 一点痴心绝孤胆，万丈豪情涉春冰。
+
 不惭世上英。
 
 ![洞仙歌](https://sunqinxuan.github.io/images/literature-2021-01-24-img3.webp)
