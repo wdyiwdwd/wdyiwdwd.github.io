@@ -225,36 +225,226 @@ GPS输出：
 ![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img19.png)
 
 
+## 测试数据集2
+
+[一组MEMS/FOG/GPS跑车测试（由大连理工大学刘兵提供）](http://www.psins.org.cn/newsinfo/1508278.html)
+
+MEMS惯组为MTI710 工作在垂直陀螺模式下（含水平姿态输出），
+
+MTi-710是高性能 AHRS。MTi-710 具有精确捕捉高频动态姿态的能力，有航向稳定功能。
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img20.png)
+
+FOG惯组为惯性级别，两IMU采样频率均为100Hz；
+
+GPS采用差分，输出频率5Hz。
+
+先静止730s，再跑车约3小时，车速较慢约3.5m/s，
+
+行车范围约方圆10km内，外行再返回。
+
+利用Matlab/PSINS Toolbox进行数据加载和一些简单测试程序如下：
+
+```matlab
+glvs;
+ts = 1/100;
+t1 = 700; t2 = 1300;
+load lb_memsfoggps;
+imuplot(imuFOG); imuplot(imuMTI); gpsplot(gps); insplot(attMTI, 'a');
+att0 = aligni0(imuFOG(400/ts:t1/ts,:), gps(1,4:6)');
+avp = inspure(imuFOG(t1/ts:1700/ts,:), [att0; getat(gps,t1)], 'H');
+avpcmpplot(avp(:,[1:3,end]), datacut(attMTI,700,1700), 'a', 'datt');
+ 
+avp0 = [att0; getat(gps,t1)];
+ins = insinit(avp0, ts);
+avperr = avperrset([10*60;30*60], 10, 100);
+imuerr = imuerrset(1000, 10000, 0.1, 100);
+Pmin = [avperrset([0.5,2],0.01,0.01); gabias(1, [100,100]); [0.01;0.01;0.01]; 0.01].^2;
+Rmin = vperrset(0.1, 0.1).^2;
+[avp1, xkpk1, zkrk1, sk] = sinsgps(imuMTI(t1/ts:t2/ts,:), gps, ins, avperr, imuerr, rep3(1), 0.1, vperrset(1,10), Pmin, Rmin, 'avped');
+avpcmpplot(avp, avp1, 'avp', 'mu');
+avpcmpplot(gps, avp1, 'vp');
+```
+
+```matlab
+%% MEMS/FOG/GPS
+close all;clear;
+glvs;
+ts = 1/100;
+t1 = 700; t2 = 10800;
+load lb_memsfoggps;
+% imuplot(imuFOG); imuplot(imuMTI); gpsplot(gps); insplot(attMTI, 'a');
+att0 = aligni0(imuFOG(400/ts:t1/ts,:), gps(1,4:6)');
+avp = inspure(imuFOG(t1/ts:t2/ts,:), [att0; getat(gps,t1)], 'H');
+avpcmpplot(avp(:,[1:3,end]), datacut(attMTI,t1,t2), 'a', 'datt');
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% error of pitch and roll between pure ins and MTi-710 AHRS
+myfigure;
+atts=datacut(attMTI,t1,t2);
+t11 = atts(:,end);
+t22 = avp(:,end);
+subplot(221), plot(t11, atts(:,1:2)/glv.deg,'-.','LineWidth',2), xygo('pr');  
+hold on, plot(t22, avp(:,1:2)/glv.deg), xygo('pr'); %legend('Pitch','Roll');
+legend('Pitch AHRS', 'Roll AHRS', 'Pitch pureINS', 'Roll pureINS');
+err = avpcmp(avp(:,[1:3,end]), atts(:,[1:3,end]), 'datt'); 
+t3 = err(:,end);
+subplot(222), hold on, plot(t3, err(:,1:2)/glv.min); xygo('datt');   mylegend('mux','muy'); 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% integrated navigation 
+avp0 = [att0; getat(gps,t1)];
+ins = insinit(avp0, ts);
+avperr = avperrset([10*60;30*60], 10, 100);
+imuerr = imuerrset(1000, 10000, 0.1, 100);
+Pmin = [avperrset([0.5,2],0.01,0.01); gabias(1, [100,100]); [0.01;0.01;0.01]; 0.01].^2;
+Rmin = vperrset(0.1, 0.1).^2;
+[avp1, xkpk1, zkrk1, sk] = sinsgps(imuMTI(t1/ts:t2/ts,:), gps, ins, avperr, imuerr, rep3(1), 0.1, vperrset(1,10), Pmin, Rmin, 'avped');
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% compare pure ins and integrated navigation
+avpcmpplot(avp1, avp, 'avp', 'mu');
+% error of pitch and roll between pure ins and integrated navigation 
+myfigure;
+t11 = avp1(:,end);
+t22 = avp(:,end);
+subplot(221), plot(t11, avp1(:,1:2)/glv.deg,'-.','LineWidth',2), xygo('pr');  
+hold on, plot(t22, avp(:,1:2)/glv.deg), xygo('pr'); %legend('Pitch','Roll');
+legend('Pitch INS&GPS', 'Roll INS&GPS', 'Pitch pureINS', 'Roll pureINS');
+subplot(223), plot(t11, yawplot(avp1(:,3)/glv.deg),'-.','LineWidth',2), xygo('y'); 
+hold on, plot(t22, yawplot(avp(:,3)/glv.deg)), xygo('y'); %legend('Yaw');
+legend('Yaw INS&GPS', 'Yaw pureINS');
+err = avpcmp(avp(:,[1:3,end]), avp1(:,[1:3,end]), 'datt'); 
+t33 = err(:,end);
+subplot(222), hold on, plot(t33, err(:,1:2)/glv.min); xygo('datt');   mylegend('mux','muy'); 
+subplot(224), hold on, plot(t33, err(:,3)/glv.min); xygo('mu');   mylegend('muz');
+```
+
+光纤惯导初始对准（400-700s）
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img21.png)
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img22.png)
+
+光纤纯惯性导航（700-1700s）
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img23.png)
+
+光纤纯惯导与组合导航姿态结果对比
+
+2.5h以内航向角保持2deg以内偏差
+
+2.5h之后开始有明显误差累积 
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img24.png)
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img25.png)
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img26.png)
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img27.png)
 
 
+## 测试数据集3
+
+[一组光纤惯组SPANISA跑车测试](http://www.psins.org.cn/newsinfo/1560060.html)
+
+FOG惯组为IMU-ISA-100C，采样频率为100Hz；
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img28.png)
+
+GPS采用差分，输出频率10Hz。
+
+先静止690s（可自主对准），然后跑车约5460s (90min, 1.5h)，再静止300s。
+
+该数据中有IE软件处理的AVP参考输出10Hz，可做对比分析。
+
+利用Matlab/PSINS Toolbox进行数据加载和一些简单测试程序如下：
+
+```matlab
+glvs;
+ts = 1/100;
+load imuisa100avpgsp.mat
+att = aligni0(imu(600/ts:700/ts,:), gps(1,4:6)');
+ins = insinit([att;gps(1,1:6)'], ts);
+avperr = avperrset([60;300], 1, 10);
+imuerr = imuerrset(0.1, 1000, 0.01, 25);
+Pmin = [avperrset([0.2,1.0],0.01,0.2); gabias(0.01, [10,10]); [0.01;0.01;0.01]; 0.001].^2;
+Rmin = vperrset(0.1, 0.3).^2;
+[avp1, xkpk1, zkrk1, sk1] = sinsgps(imu(700/ts:5500/ts,:), gps, ins, avperr, imuerr, rep3(1), 0.1, vperrset(0.1,10), Pmin, Rmin, 'avped');
+avpcmpplot(avpie, avp1);
+imu1 = imudeldrift(imu, avp1, 4000);
+att1 = aligni0(imu1(400/ts:700/ts,:), gps(1,4:6)');
+avp2 = inspure(imu1(700/ts+1:end,:),[att1;gps(1,4:6)'],'H');
+avpcmpplot(avpie, avp2);
+```
+
+```matlab
+%% IMU-ISA-100C
+close all;clear;
+glvs;
+ts = 1/100;
+load imuisa100avpgsp.mat
+%%%%%%%%%%%%%%%%%%%%%%%
+% integrated navigation 
+att = aligni0(imu(600/ts:700/ts,:), gps(1,4:6)');
+ins = insinit([att;gps(1,1:6)'], ts);
+avperr = avperrset([60;300], 1, 10);
+imuerr = imuerrset(0.1, 1000, 0.01, 25);
+Pmin = [avperrset([0.2,1.0],0.01,0.2); gabias(0.01, [10,10]); [0.01;0.01;0.01]; 0.001].^2;
+Rmin = vperrset(0.1, 0.3).^2;
+[avp1, xkpk1, zkrk1, sk1] = sinsgps(imu(700/ts:5500/ts,:), gps, ins, avperr, imuerr, rep3(1), 0.1, vperrset(0.1,10), Pmin, Rmin, 'avped');
+avpcmpplot(avpie, avp1);
+%%%%%%%%%%%%%%%%%%%%%%%
+% pure INS
+imu1 = imudeldrift(imu, avp1, 4000);
+att1 = aligni0(imu1(400/ts:700/ts,:), gps(1,4:6)');
+avp2 = inspure(imu1(700/ts+1:end,:),[att1;gps(1,4:6)'],'H');
+avpcmpplot(avpie, avp2);
+% error of pitch and roll between pure ins and integrated navigation 
+myfigure;
+t11 = avpie(:,end);
+t22 = avp2(:,end);
+subplot(221), plot(t11, avpie(:,1:2)/glv.deg,'-.','LineWidth',2), xygo('pr');  
+hold on, plot(t22, avp2(:,1:2)/glv.deg), xygo('pr'); %legend('Pitch','Roll');
+legend('Pitch INS&GPS', 'Roll INS&GPS', 'Pitch pureINS', 'Roll pureINS');
+subplot(223), plot(t11, yawplot(avpie(:,3)/glv.deg),'-.','LineWidth',2), xygo('y'); 
+hold on, plot(t22, yawplot(avp2(:,3)/glv.deg)), xygo('y'); %legend('Yaw');
+legend('Yaw INS&GPS', 'Yaw pureINS');
+err = avpcmp(avp2(:,[1:3,end]), avpie(:,[1:3,end]), 'mu'); 
+t33 = err(:,end);
+subplot(222), hold on, plot(t33, err(:,1:2)/glv.min); xygo('mu');   mylegend('mux','muy'); 
+subplot(224), hold on, plot(t33, err(:,3)/glv.min); xygo('mu');   mylegend('muz');
+```
+
+AVP-IE 参考输出结果
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img29.png)
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img30.png)
+
+惯导初始对准结果
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img31.png)
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img32.png)
+
+纯惯导输出结果
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img33.png)
+
+光纤纯惯导与AVP-IE姿态结果对比
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img34.png)
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img35.png)
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img36.png)
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img36.png)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## 测试结果总结
 
 |   | 数据来源         | 惯性器件                | 采样频率  | 时长    | 姿态误差 | 航向误差                                        | 参考源                  |
 |---|--------------|---------------------|-------|-------|------|---------------------------------------------|----------------------|
-|   |              |                     |       |       |      |                                             |                      |
 | 1 | 西安中科华芯测控有限公司 | 惯性级激光惯导             | 200Hz | 33min | 50’  | 角速率大时两者差值波动大(<30deg)，较小时两者差值较平稳(<5deg)      | CNS（大视场星敏，标称精度20''）  |
-| 2 | 武汉大学         |  FOG惯组(KVH1775)     | 100Hz | 3h    | 50'  | 2.5h以内航向角偏差较小(<2deg)，2.5h-3h有明显误差累积(<17deg) | INS-GNSS组合导航         |
+| 2 | 大连理工大学         |  FOG惯组     | 100Hz | 3h    | 50'  | 2.5h以内航向角偏差较小(<2deg)，2.5h-3h有明显误差累积(<17deg) | INS-GNSS组合导航         |
 | 3 |              | FOG惯组(IMU-ISA-100C) | 100Hz | 1.5h  | 1‘   | 10’                                         | 外部提供的AVP参考           |
