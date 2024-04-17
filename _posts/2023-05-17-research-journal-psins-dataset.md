@@ -438,7 +438,7 @@ AVP-IE 参考输出结果
 
 ![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img36.png)
 
-![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img36.png)
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img37.png)
 
 
 ## 测试结果总结
