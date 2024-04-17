@@ -42,7 +42,7 @@ ensemble rmse on 1003.020000 = 9.241940
 
 <table><tr>
 <td><img src=https://sunqinxuan.github.io/images/projects-2023-09-21-img1.jpg border=0></td>
-<td><img src=https://sunqinxuan.github.io/images/projects-2023-09-21-img1.jpg border=0></td>
+<td><img src=https://sunqinxuan.github.io/images/projects-2023-09-21-img2.jpg border=0></td>
 </tr></table>
 
 ## 相关链接
