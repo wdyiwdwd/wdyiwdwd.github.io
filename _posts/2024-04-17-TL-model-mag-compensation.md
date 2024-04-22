@@ -81,6 +81,54 @@ I've never seen that the vector field can be solved this way...
 link:
 [A. J. Canciani, "Magnetic Navigation on an F-16 Aircraft Using Online Calibration," in IEEE Transactions on Aerospace and Electronic Systems, vol. 58, no. 1, pp. 420-434.](https://ieeexplore.ieee.org/document/9506809)
 
+> Magnetic anomaly navigation has recently been flight test
+proven on an F-16 aircraft. The corrupting magnetic environment on
+this operational platform is 2–3 orders of magnitude larger than previous
+flight-tests on geo-survey aircraft, while also displaying stochastic
+drift. The difficult magnetic environment of the platform necessitated a
+<u>combination of batch and online calibration</u> to obtain accurate navigation
+solutions.
+
+> When calibrating
+a scalar sensor, all magnetic fields in the body-frame
+of the aircraft create corrupting fields which are coupled
+to aircraft attitude.
+
+> Discussed in this article are two major types of “truthing”
+to drive the calibration of the magnetometer measurements:
+<u>map-based calibration and map-less calibration</u>.
+
+> The first
+method, map-based calibration, is less common in the literature,
+but more intuitive. This calibration method flies
+through a high-quality magnetic anomaly map (with GPS)
+and calibrates the system measurements such that they most
+closely match the magnetic anomaly map. This method
+requires highly accurate magnetic anomaly maps but can
+produce the best results given the navigation system is also
+using this map to navigate. <u>This method cannot produce
+calibration errors smaller than the errors which exist in the
+magnetic map-products being used.</u>
+
+> Map-less calibration is more practical in many situations
+and relies on the idea of a “disturbance field.” A
+disturbance field takes advantage of the physics of the
+<u>slowly varying earth magnetic field and band-pass filters
+the scalar magnetic data such that no earth field remains
+in the signal</u>. Note this method also eliminates some of the
+aircraft fields, however, a mathematical model which fits
+the band-pass filtered data can then be expanded to predict
+magnetic field effects across the entire frequency spectrum.
+This method is more brittle than map-based calibration and
+suffers from observability issues but has the obvious benefit
+of not requiring a map. 
+
+
+
+
+
+
+
 
 
 
