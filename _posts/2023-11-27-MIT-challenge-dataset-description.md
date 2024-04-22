@@ -12,7 +12,7 @@ MIT Challenge Dataset Description.
 
 The MIT Challenge Dataset can be downloaded at [Signal Enhancement for Magnetic Navigation Challenge Problem](https://magnav.mit.edu/).
 
-And this section is mainly quoted from 
+And this article is mainly quoted from 
 [A. R. Gnadt, “Advanced Aeromagnetic Compensation Models for Airborne Magnetic Anomaly Navigation,” Massachusetts Institute of Technology, 2022. ](https://dspace.mit.edu/handle/1721.1/145137), and also notebooks and reports of [this repository](https://github.com/Naatyu/MagNav).
 
 > The <u>Department of the Air Force Massachusetts Institute of Technology Artificial Intelligence Accelerator (DAF-MIT AI Accelerator)</u> partnered with <u>Sanders Geophysics Ltd. (SGL)</u> to collect data over the Ottawa area in Ontario, Canada. They collected data from <u>five scalar magnetometers</u> placed at different locations on the aircraft, a <u>Cessna 208B Grand Caravan</u>, as well as from <u>three vector magnetometers</u> also placed at different locations on the aircraft. The scalar magnetic field data in the dataset used were measured using an optically pumped magnetometer. The vector magnetic field measurements were made using a Fluxgate magnetometer.
