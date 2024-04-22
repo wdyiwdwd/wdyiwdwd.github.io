@@ -1,7 +1,7 @@
 ---
 title: "基于Tolles-Lawson模型的航磁补偿系统"
 collection: projects
-type: "Project"s
+type: "Project"
 permalink: /projects/2023-09-21-mag-compensation
 venue: "ZJLab"
 date: 2023-09-21
@@ -41,8 +41,8 @@ dataset有两个版本：版本一和版本二。
 ensemble rmse on 1003.020000 = 9.241940
 
 <table><tr>
-<td><img src=https://sunqinxuan.github.io/images/projects-2023-09-21-img1.jpg border=0></td>
-<td><img src=https://sunqinxuan.github.io/images/projects-2023-09-21-img2.jpg border=0></td>
+<td><img src=https://sunqinxuan.github.io/images/projects-2023-09-21-img1.jpg></td>
+<td><img src=https://sunqinxuan.github.io/images/projects-2023-09-21-img2.jpg></td>
 </tr></table>
 
 ## 相关链接
