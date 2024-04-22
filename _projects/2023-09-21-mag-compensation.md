@@ -40,10 +40,21 @@ dataset有两个版本：版本一和版本二。
 
 ensemble rmse on 1003.020000 = 9.241940
 
-<table><tr>
-<td><img src=https://sunqinxuan.github.io/images/projects-2023-09-21-img1.jpg></td>
-<td><img src=https://sunqinxuan.github.io/images/projects-2023-09-21-img2.jpg></td>
-</tr></table>
+<img src="https://sunqinxuan.github.io/images/projects-2023-09-21-img2.jpg" alt="architecture" />
+
+<img src="https://sunqinxuan.github.io/images/projects-2023-09-21-img3.jpg" alt="architecture" />
+
+ensemble rmse on 1003.080000 = 8.374712
+
+<img src="https://sunqinxuan.github.io/images/projects-2023-09-21-img4.jpg" alt="architecture" />
+
+<img src="https://sunqinxuan.github.io/images/projects-2023-09-21-img5.jpg" alt="architecture" />
+
+ensemble rmse on 1003.040000 = 10.538149
+
+<img src="https://sunqinxuan.github.io/images/projects-2023-09-21-img6.jpg" alt="architecture" />
+
+<img src="https://sunqinxuan.github.io/images/projects-2023-09-21-img7.jpg" alt="architecture" />
 
 ## 相关链接
 
