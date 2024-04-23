@@ -10,7 +10,7 @@ location: "Tianjin, China"
 
 English Course Assignment 1 - Hobby
 
-### Chinese calligraphy in my leisure time
+## Chinese calligraphy in my leisure time
 
 Chinese calligraphy is generally an art of writing. I know that the Latin language also has its own calligraphy. It's certainly quite different from that in China, but they share something in common that they both aim to make the character more beautiful and need great concentration.
 

@@ -10,7 +10,7 @@ location: "Tianjin, China"
 
 English Course Assignment 3 - Hero
 
-### My Personal Hero
+## My Personal Hero
 
 I put a word "personal" before "hero", because I think everyone has his/her own hero. My personal hero is my mother. Her name is Ge Xia, where Ge is her surname, and Xia is the given name that means rosy clouds. However, Ge is not her true surname. She was adopted after her birth. Fortunately her adoptive parents were both kind hearted and were good to her. She has a strong character and a kind heart, and she is also an excellent accountant.
 
