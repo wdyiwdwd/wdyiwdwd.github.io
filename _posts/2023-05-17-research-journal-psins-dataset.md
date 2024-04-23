@@ -448,3 +448,47 @@ AVP-IE 参考输出结果
 | 1 | 西安中科华芯测控有限公司 | 惯性级激光惯导             | 200Hz | 33min | 50’  | 角速率大时两者差值波动大(<30deg)，较小时两者差值较平稳(<5deg)      | CNS（大视场星敏，标称精度20''）  |
 | 2 | 大连理工大学         |  FOG惯组     | 100Hz | 3h    | 50'  | 2.5h以内航向角偏差较小(<2deg)，2.5h-3h有明显误差累积(<17deg) | INS-GNSS组合导航         |
 | 3 |              | FOG惯组(IMU-ISA-100C) | 100Hz | 1.5h  | 1‘   | 10’                                         | 外部提供的AVP参考           |
+
+
+## yawplot函数
+
+作用：
+将限制在 -180deg ~180deg之间的角度，
+转换为连续变换的角度。
+
+yawplot.m文件：
+
+```matlab
+function y=yawplot(yaw)
+y=yaw;
+delta_yaw=0;
+for k=1:size(yaw,1)
+    if k==1
+        continue;
+    else
+        if yaw(k)-yaw(k-1)<-300
+            delta_yaw=delta_yaw+360;
+        else
+            if yaw(k)-yaw(k-1)>300
+                delta_yaw=delta_yaw-360;
+            end
+        end
+        y(k)=yaw(k)+delta_yaw;
+    end
+end
+```
+
+在insplot.m文件中：
+
+```matlab
+yaw=yawplot(avp(:,3)/glv.deg);
+subplot(322), plot(t, yaw); xygo('y'); legend('Yaw');
+```
+
+变换前：
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img38.png)
+
+变换后：
+
+![img](http://sunqinxuan.github.io/images/posts-research-journal-2023-05-17-img39.png)
