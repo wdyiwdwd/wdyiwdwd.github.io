@@ -10,10 +10,6 @@ location: "Beijing, China"
 
 基于PSINS的惯性导航系统
 
-本文所使用的是由西北工业大学[严恭敏](https://teacher.nwpu.edu.cn/yangongmin.html)老师开源的[PSINS](http://www.psins.org.cn/sy)算法（c++版本）。
-
-
-
 ## 测试数据1
 
 ### 传感器信息
@@ -22,9 +18,9 @@ location: "Beijing, China"
 
 ### 测试场景
 
-北京市海淀区知春路，中国卫星通信大厦楼顶。
-
 手持传感器。
+
+北京市海淀区知春路，中国卫星通信大厦楼顶。
 
 ### 结果统计
 
@@ -41,7 +37,7 @@ location: "Beijing, China"
 
 ![img](http://sunqinxuan.github.io/images/projects-2023-06-07-img1.png)
 
-### 磁场测量值
+### Mag测量值
 
 ![img](http://sunqinxuan.github.io/images/projects-2023-06-07-img2.png)
 
@@ -62,19 +58,85 @@ location: "Beijing, China"
 ![img](http://sunqinxuan.github.io/images/projects-2023-06-07-img6.png)
 
 
-
-
 ## 测试数据2
 
+### 传感器信息
+
+[WTGAHRS2产品资料](https://wit-motion.yuque.com/wumwnr/docs/rlp3gu)
+
+### 测试场景
+
+车载传感器，沿北京六环线一圈。
+
+传感器安装（右-前-上，车头朝向图片左侧）：
+
+![img](http://sunqinxuan.github.io/images/projects-2023-06-07-img7.png)
+
+### IMU测量值 
+
+![img](http://sunqinxuan.github.io/images/projects-2023-06-07-img8.png)
+
+### Mag测量值
+
+![img](http://sunqinxuan.github.io/images/projects-2023-06-07-img9.png)
+
+### GNSS数据
+
+![img](http://sunqinxuan.github.io/images/projects-2023-06-07-img10.png)
+
+全程停留在 经度116.1deg，纬度39.8deg 附近，
+并且，[16:02:53.683 - 16:03:07.057]时间区别内输出零值。
+
+![img](http://sunqinxuan.github.io/images/projects-2023-06-07-img11.png)
+
+### 惯性导航结果
+
+![img](http://sunqinxuan.github.io/images/projects-2023-06-07-img12.png)
+
+### AHRS与惯导结果比较
+
+![img](http://sunqinxuan.github.io/images/projects-2023-06-07-img13.png)
 
 
+## 测试数据3
 
+### 传感器信息
 
+[3DM-GX5-GNSS/INS产品资料](https://www.microstrain.com/sites/default/files/3dm-gx5-45_datasheet_8400-0091_rev_o.pdf)
 
+### 测试场景
 
+车载传感器，沿北京六环线一圈。
 
+传感器安装（前-右-下，车头朝向图片左侧）：
 
+![img](http://sunqinxuan.github.io/images/projects-2023-06-07-img14.jpg)
 
+### IMU测量
+
+![img](http://sunqinxuan.github.io/images/projects-2023-06-07-img15.png)
+
+### Mag测量
+
+![img](http://sunqinxuan.github.io/images/projects-2023-06-07-img16.png)
+
+### GNSS
+
+![img](http://sunqinxuan.github.io/images/projects-2023-06-07-img17.png)
+
+### 惯性导航结果
+
+![img](http://sunqinxuan.github.io/images/projects-2023-06-07-img18.png)
+
+### AHRS与惯导结果比较
+
+![img](http://sunqinxuan.github.io/images/projects-2023-06-07-img19.png)
+
+- 姿态角误差<8.5deg
+- 航向角误差
+	- 0~1h: <10deg
+	- 1~2h: <17deg
+	- 2~4h: <50deg
 
 
 ## 相关链接
