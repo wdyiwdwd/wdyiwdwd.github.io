@@ -7,5 +7,5 @@ redirect_from:
   - /main.html
 ---
 
-This is the website of Dr. Q. Sun.
+This is the website of Yansong Gong.
 
