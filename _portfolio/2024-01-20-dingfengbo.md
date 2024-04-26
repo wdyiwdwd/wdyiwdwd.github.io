@@ -1,6 +1,6 @@
 ---
 title: "记一次很满意的扇面创作"
-excerpt: "<br/><img src='/images/portfolio-2024-01-20-dingfengbo.PNG'>"
+excerpt: "<br/><img src='/images/portfolio-2024-01-20-dingfengbo.jpg'>"
 collection: portfolio
 ---
 
