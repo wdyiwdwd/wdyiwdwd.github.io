@@ -21,7 +21,7 @@ repository               : "sunqinxuan.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "https://sunqinxuan.github.io/images/avatar.webp"
+  avatar           : "https://sunqinxuan.github.io/images/avatar.jpg"
   name             : "孙沁璇"
   #pronouns         :  ""  
   bio              : "An interesting person"
