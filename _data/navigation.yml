@@ -6,11 +6,8 @@ main:
   - title: "Projects"
     url: /projects/    
 
-  - title: "Research Journal"
+  - title: "Blog"
     url: /year-archive/
-
-  - title: "Literature"
-    url: /literature/    
     
   - title: "Portfolio"
     url: /portfolio/
