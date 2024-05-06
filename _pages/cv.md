@@ -11,25 +11,29 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Control Science and Engineering, Nankai University, 2021
-* M.S. in Control Science and Engineering, Nankai University, 2016
-* B.S. in Electronics and Information Engineering, Beihang University, 2013
+* M.S. in Software Engineering, Nankai University, 2022
+* B.S. in Software Engineering, Nankai University, 2019
 
 Work experience
 ======
-* 2022.9-present: Research Assistant
-  * Zhejiang Lab
-  * Duties included: 
-  
-* 2021.8-2022.8: Algorithm Engineer
+* 2022.7-present: Localization Algorithm Engineer
+  * UISEE (Beijing) Technology
+  * Duties included:
+    * LiDAR-based Semantic Localization
+    * LiDAR-based Re-Localization (Global Localization)
+    * Semantic Mapping (LiDAR-camera Fusion)
+
+
+* 2021.8-2022.8: Kernel Development Engineer
   * China Intelligent and Connected Vehicles (Beijing) Research Institute Co.,Ltd.
-  * Duties included: 
+  * Duties included:
+    * Development of Render Engine (Open Render)
 
 Projects
 ======
-  <ul>{% for post in site.projects reversed %}
+  <!-- <ul>{% for post in site.projects reversed %}
     {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
+  {% endfor %}</ul> -->
 
 Publications
 ======
