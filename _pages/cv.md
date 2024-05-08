@@ -9,11 +9,15 @@ redirect_from:
 
 {% include base_path %}
 
-## Education
+<br/>
+
+Education
+====
 * M.S. in Software Engineering, Nankai University, 2022
 * B.S. in Software Engineering, Nankai University, 2019
 
-## Work experience
+Work experience
+====
 * 2022.7-present: Localization Algorithm Engineer
   * UISEE (Beijing) Technology
   * Duties included:
@@ -33,11 +37,11 @@ redirect_from:
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul> -->
 
-## Publications
-
-    {% for post in site.publications reversed %}
+Publications
+====
+    <ul>{% for post in site.publications reversed %}
       {% include archive-single-cv.html %}
-    {% endfor %}
+    {% endfor %}</ul>
 
   * Under Review
 
@@ -50,14 +54,15 @@ redirect_from:
 
     * 李祥攀, 耿达, **公岩松**, 孙凤池, 冯霞, "移动机器人基于三维激光传感器的室内环境物体检测", 中国控制会议 (CCC), 2018, (**EI**)
   
-## Patents
-  - 语义地图后处理方法、装置、电子设备和存储介质 (实质审查), 2023.12.25, CN117782053A
-  - 车辆定位方法、装置、电子设备及存储介质 (实质审查), 2023.07.20, CN116929366A
-  - 交通标线在线检测方法、装置、电子设备和存储介质 (实质审查), 2023.06.02, CN116665169A
-  - 激光点云2D-3D双模态交互增强不规则电线检测方法 (实质审查), 2022.07.19, CN115131417A
-  - 配网带电作业机器人的激光点云输电线引线拟合方法 (授权), 2021.07.26, CN113468706A
+  * Patents
+    - 语义地图后处理方法、装置、电子设备和存储介质 (实质审查), 2023.12.25, CN117782053A
+    - 车辆定位方法、装置、电子设备及存储介质 (实质审查), 2023.07.20, CN116929366A
+    - 交通标线在线检测方法、装置、电子设备和存储介质 (实质审查), 2023.06.02, CN116665169A
+    - 激光点云2D-3D双模态交互增强不规则电线检测方法 (实质审查), 2022.07.19, CN115131417A
+    - 配网带电作业机器人的激光点云输电线引线拟合方法 (授权), 2021.07.26, CN113468706A
   
-## Honers
+Honers
+====
   - 2020-2021 南开大学 国家奖学金
   - 2022.06   南开大学 陈省身学术新人奖学金
   - 2019-2020 南开大学 研究生二等公能奖学金
