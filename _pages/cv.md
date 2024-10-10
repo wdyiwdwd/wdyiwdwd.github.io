@@ -26,8 +26,8 @@ Work experience
     * Semantic Mapping (LiDAR-camera Fusion)
 
 
-* 2021.8-2022.8: Kernel Development Engineer
-  * China Intelligent and Connected Vehicles (Beijing) Research Institute Co.,Ltd.
+* 2021.8-2012.8: Kernel Development Engineer
+  * Alibaba Youku Co.,Ltd.
   * Duties included:
     * Development of Render Engine (Open Render)
 
@@ -42,10 +42,6 @@ Work experience
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-
-  * **Under Review**
-
-    * **Y. Gong**, X. Zhang, J. Feng, X. He and D. Zhang, "LiDAR-based HD Map Localization using Semantic Generalized ICP with Road Marking Detection," in IEEE/RSJ International Conference on Intelligent Robots and Systems **(IROS)**, 2024. 
   
   * **Others**
     * S. Gong, **Y. Gong**, L. Su, J. Yuan, F. Sun, "Indoor Scene Recognition by Fusing Map-Level and Frame-Level Decisions with CRF" in IEEE International Conference on Communication, Image and Signal Processing (CCISP), 2021. (**EI**)
