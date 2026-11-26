@@ -8,9 +8,9 @@
 
 # Basic Site Settings
 locale                   : "zh-CH"
-title                    : "Yangsong.Gong"
+title                    : "Yansong.Gong"
 title_separator          : "-"
-name                     : &name "Yangsong Gong"
+name                     : &name "Yansong Gong"
 description              : &description "another interesting person"
 url                      : https://wdyiwdwd.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -157,7 +157,7 @@ exclude:
   - Gemfile
   - Gruntfile.js
   - LICENSE
-  - README
+  - README.md
   - Rakefile
   - assets/js/_main.js
   - assets/js/plugins

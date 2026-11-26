@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "简历"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -11,25 +11,24 @@ redirect_from:
 
 <br/>
 
-## Education
+## 教育经历
 
-* M.S. in Software Engineering, Nankai University, 2022
-* B.S. in Software Engineering, Nankai University, 2019
+* 南开大学 软件工程 硕士，2022
+* 南开大学 软件工程 学士，2019
 
-Work experience
-====
-* 2022.7-present: Localization Algorithm Engineer
-  * UISEE (Beijing) Technology
-  * Duties included:
-    * LiDAR-based Semantic Localization
-    * LiDAR-based Re-Localization (Global Localization)
-    * Semantic Mapping (LiDAR-camera Fusion)
+## 工作经历
 
+* 2022.7-至今：定位算法工程师
+  * 驭势科技（北京）
+  * 主要工作：
+    * 基于激光雷达的语义定位
+    * 基于激光雷达的重定位（全局定位）
+    * 语义建图（激光雷达与相机融合）
 
-* 2021.8-2012.8: Kernel Development Engineer
-  * Alibaba Youku Co.,Ltd.
-  * Duties included:
-    * Development of Render Engine (Open Render)
+* 2021.8-2022.6：内核开发工程师
+  * 阿里巴巴 优酷
+  * 主要工作：
+    * 渲染引擎开发（Open Render）
 
 <!-- Projects
 ======
@@ -37,27 +36,27 @@ Work experience
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul> -->
 
-## Publications
+## 发表论文
 
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-  * **Others**
+
+  * **其他论文**
     * S. Gong, **Y. Gong**, L. Su, J. Yuan, F. Sun, "Indoor Scene Recognition by Fusing Map-Level and Frame-Level Decisions with CRF" in IEEE International Conference on Communication, Image and Signal Processing (CCISP), 2021. (**EI**)
 
     * 胡子琦, 苑晶, **公岩松**, 俞诗卓, 张雪波, "面向配网带电作业机器人的输电线引线重建", 控制工程, 2021, (**核心期刊**)。
 
     * 李祥攀, 耿达, **公岩松**, 孙凤池, 冯霞, "移动机器人基于三维激光传感器的室内环境物体检测", 中国控制会议 (CCC), 2018, (**EI**)
-  
-  * **Patents**
-    - 语义地图后处理方法、装置、电子设备和存储介质 (实质审查), 2023.12.25, CN117782053A
-    - 车辆定位方法、装置、电子设备及存储介质 (实质审查), 2023.07.20, CN116929366A
-    - 交通标线在线检测方法、装置、电子设备和存储介质 (实质审查), 2023.06.02, CN116665169A
-    - 激光点云2D-3D双模态交互增强不规则电线检测方法 (实质审查), 2022.07.19, CN115131417A
-    - 配网带电作业机器人的激光点云输电线引线拟合方法 (授权), 2021.07.26, CN113468706A
-  
-## Honers
+
+  * **发明专利**
+    - 语义地图后处理方法、装置、电子设备和存储介质（实质审查），2023.12.25，CN117782053A
+    - 车辆定位方法、装置、电子设备及存储介质（实质审查），2023.07.20，CN116929366A
+    - 交通标线在线检测方法、装置、电子设备和存储介质（实质审查），2023.06.02，CN116665169A
+    - 激光点云2D-3D双模态交互增强不规则电线检测方法（实质审查），2022.07.19，CN115131417A
+    - 配网带电作业机器人的激光点云输电线引线拟合方法（授权），2021.07.26，CN113468706A
+
+## 荣誉奖励
 
   - 2020-2021 南开大学 国家奖学金
   - 2022.06   南开大学 陈省身学术新人奖学金

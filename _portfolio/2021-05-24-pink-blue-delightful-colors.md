@@ -1,11 +1,7 @@
 ---
-title: "title"
-excerpt: "<br/><img src='/images/portfolio-2021-05-24-pink-blue-delightful-colors.PNG'>"
+title: "作品集"
+excerpt: "整理中，敬请期待。"
 collection: portfolio
 ---
 
-![通知书](https://sunqinxuan.github.io/images/portfolio-2021-05-24-pink-blue-delightful-colors.PNG)
-
-<br>
-
-some descriptions...
+作品集整理中，敬请期待。

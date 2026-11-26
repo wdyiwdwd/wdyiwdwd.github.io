@@ -5,7 +5,7 @@ permalink: /publication/3D-Angle
 excerpt: 'Scan Matching of Laser Point Clouds Based on the 3D Angle Features within Indoor Environments'
 date: 2019-07-29
 venue: 'IEEE International Conference on CYBER Technology in Automation, Control, and Intelligent Systems (CYBER) (EI)'
-paperurl: 'http://wdyiwdwd.github.io/files/ASE-Encoder.pdf'
+paperurl: 'https://ieeexplore.ieee.org/document/9066574'
 citation: 'Y. Gong, Y. Zhang, F. Sun and J. Yuan, "Scan Matching of Laser Point Clouds Based on the 3D Angle Features within Indoor Environments," in IEEE International Conference on CYBER Technology in Automation, Control, and Intelligent Systems (CYBER), 2019.'
 ---
 
